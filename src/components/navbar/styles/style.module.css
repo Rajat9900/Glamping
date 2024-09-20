@@ -1,0 +1,58 @@
+
+.navbarMainDiv{
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+}
+    .navbar{
+      display: flex;
+      width: 85%;
+      justify-content: space-between;
+      padding: 10px 15px;
+      
+      align-items: center;
+      border-radius: 100px;
+      /* background: rgba(255, 255, 255, 0.7); */
+      background: rgba(201, 203, 184, 0.6)
+    }
+
+    .logo{
+     font-size: '24px';
+     font-weight: 'bold';
+      color: '#2E4B2B';
+    }
+    .navLinks{
+      display: flex;
+     list-style: none;
+     width: 40%;
+  justify-content:space-between;
+    }
+
+    .navLinksLi{
+      margin: 0 15px;
+    }
+    .navLink{
+        color: rgba(51, 61, 41, 1);
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .navLink:hover{
+text-decoration: underline;
+
+    }
+
+    .bookNow{
+      padding: 19px 50px;
+      background: #333D29;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+     border-radius: 60px;
+      border: none;
+      cursor: pointer;
+    }
+  

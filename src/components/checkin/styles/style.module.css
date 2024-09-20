@@ -1,0 +1,128 @@
+.formContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px ;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 20px 0px
+  };
+  .imgCuttingBottom{
+    position: relative
+   
+  }
+ 
+   .imgCuttingBottom img{
+position: absolute;
+top: 520px;
+  }
+  .formItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center */
+  };
+  .formItem div{
+    font-size: 17px;
+    font-weight:  500;
+  }
+  .formItem p{
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    gap: 5px;
+   
+    color: rgba(99, 99, 99, 1);
+  }
+  .checkAvailability{
+    padding: 0px 50px;
+    background: #2E4B2B;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  /* Location */
+.LocationDiv{
+  background-color: #BCBEA6CC;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.HeadingLocation{
+  background-image: url('/public/cropImage2.png');
+  display: flex;
+ /* padding: 100px 90px; */
+ padding-top: 100px;
+ padding-left: 100px;
+ padding-right: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonLocation{
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+}
+.HeadingLocation button{
+  padding: 15px 18px;
+  border-radius: 50px;
+  font-size: rgba(51, 61, 41, 1);
+  background-color: white;
+  border: 1px solid ;  
+}
+.HeadingLocation button:hover{
+  padding: 15px 18px;
+  border-radius: 50px;
+  /* font-size: rgba(51, 61, 41, 1); */
+  background-color: rgba(51, 61, 41, 1);
+  border: 1px solid rgba(51, 61, 41, 1);
+  color: white ;
+  
+  cursor: pointer;
+  
+}
+.locationsCard{
+  padding: 10px 90px;
+ display: flex;
+ gap: 20px;
+ flex-wrap: wrap;
+}
+.locationsCard h4{
+  font-size: 17px;
+  font-weight: 500;
+}
+.locationsCard p{
+  font-size: 16px;
+font-weight: 400;
+}
+
+/* try search for */
+.trySearch{
+  padding: 50px 110px;
+  display: flex;
+  flex-direction: column;
+}
+.trySearchHeading{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.trySeachCard{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.particularHouse{
+width: 186px;
+height: 136px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background-color: #C9CBB833;
+}

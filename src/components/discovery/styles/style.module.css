@@ -1,0 +1,293 @@
+.discoveryHeroSection{
+position: relative;
+
+width: 100%;
+height: 567px;
+}
+.discoveryHeroCutTop{
+ /* z-index: 1; */
+}
+
+.discoveryHeroCutbottom{
+position: absolute;
+top: 360px;
+}
+.bookImageStyle{
+    position: relative;
+    width: 100%;
+    height: 523px;
+    filter: brightness(0.5);
+}
+.discoveryHeroImageCont{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+.bookImagesCont{
+    position: absolute;
+    top: 170px;
+    left: 400px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    color: white;
+}
+.bookImagesCont h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.bookImagesCont p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.bookImagesCont  button{
+padding: 19px 50px;
+    background: #333D29;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+}
+
+/* discoverContentCard */
+.discoverContentCard{
+    display: flex;
+    flex-direction: column;
+     padding: 50px 110px;
+}
+.discoverContentCard1{
+display: flex;
+flex-direction: column;
+padding: 50px 110px;
+
+}
+.HeadingDiscovery div{
+font-weight: 600;
+font-size: 36px;
+}
+.HeadingDiscovery p{
+    font-weight: 500;
+    font-size: 17px;
+    color: #636363;
+      
+}
+.CardCarouselContent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0px;
+    gap: 24px;
+}
+.CardCarouselContent1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 0px;
+    gap: 20px;
+}
+.HeadingContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.btnDiscovery{
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+}
+.btnDiscovery1{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid gray;
+    border-radius: 80px;
+}
+.btnDiscovery1 div{
+    padding: 15px 18px;
+    font-size: rgba(51, 61, 41, 1);
+  
+   
+}
+.btnDiscovery1 img{
+    padding: 15px 18px;
+    font-size: rgba(51, 61, 41, 1);
+
+   
+}
+.btnDiscovery button{
+    padding: 15px 18px;
+    border-radius: 50px;
+    font-size: rgba(51, 61, 41, 1);
+    background-color: white;
+    border: 1px solid ;     
+}
+.btnDiscovery button:hover{
+    padding: 15px 18px;
+    border-radius: 50px;
+    /* font-size: rgba(51, 61, 41, 1); */
+    background-color: rgba(51, 61, 41, 1);
+    border: 1px solid rgba(51, 61, 41, 1);
+    color: white ;
+    
+    cursor: pointer;
+}
+.CardContentDiv{
+    position: relative;
+    width: 32%;
+    border: 0px solid gray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.07);
+}
+.CardContentDiv1{ 
+    margin-top: 30px; 
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+.cardContent{
+    padding: 15px 20px;
+    width: 65%;
+}
+.cardContent1{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.cardContent1 div{
+    margin-top: 30px;
+font-weight: 600;
+font-size: 18px;
+}
+.cardContent1 p{
+font-weight: 400;
+font-size: 15px;
+color: rgba(99, 99, 99, 1);
+text-align: center;
+}
+
+.trySeachCard{
+    display: flex;
+    padding: 0px 90px;
+    margin-top: 165px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .particularHouse{
+    width: 122px;
+    height: 97px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  }
+.trySeachCard button{
+  border: 1px solid gray;
+    background: white;
+    border-radius: 60px;
+    margin-top: 12px;
+    padding: 5px 15px;
+    margin-bottom: 41px;
+}
+.ImgCarousel{
+width: 100%; 
+height: 338px;
+
+}
+.startRatiingdiv{
+ position: absolute;
+ top: 0px;  
+ left: 10px; 
+ background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+ padding: 7px 15px;
+}
+.cardContent div{
+font-size: 20px;
+font-weight: 600;
+}
+.cardContent p{
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+   color: rgba(99, 99, 99, 1)
+}
+.cardContent h4 span{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Inter;
+}
+
+/* accomdContent */
+.accomdImageDiv1{
+    width: 100%;
+    padding: 0px 90px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.accomdImageDiv2 img{
+    position: relative;
+}
+.absoluteDivAccomd{
+    position: absolute;
+    top: 250px;
+    width: 570px;
+    left: 120px;
+    height: 200px;
+    color: white;
+    background-color: rgba(51, 61, 41, 0.6);
+    padding: 40px 40px;
+    border-radius: 10px;
+  
+}
+.absoluteDivAccomd div{
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 600;
+}
+.absoluteDivAccomd p{
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.absoluteDivAccomd button{
+    margin-bottom: 30px;
+    padding: 17px 50px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 60px;
+}
+
+/* Accomdation */
+.HeadingDiscovery1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+}
+.HeadingDiscovery1 div{
+    font-weight: 600;
+    font-size: 36px;
+}
+.HeadingDiscovery1 p{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(99, 99, 99, 1);
+}
