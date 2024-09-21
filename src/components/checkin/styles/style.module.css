@@ -56,7 +56,7 @@ top: 520px;
   background-image: url('/public/cropImage2.png');
   display: flex;
  /* padding: 100px 90px; */
- padding-top: 100px;
+ padding-top: 78px;
  padding-left: 100px;
  padding-right: 100px;
   justify-content: space-between;
@@ -94,6 +94,7 @@ top: 520px;
 .locationsCard h4{
   font-size: 17px;
   font-weight: 500;
+  margin-bottom: -10px;
 }
 .locationsCard p{
   font-size: 16px;
@@ -125,4 +126,10 @@ justify-content: center;
 align-items: center;
 border-radius: 10px;
 background-color: #C9CBB833;
+}
+.particularHouse h4{
+font-size: 18px;
+    font-weight: 600;
+    margin-top: 13px;
+    margin-bottom: -2px;
 }

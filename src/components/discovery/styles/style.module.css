@@ -236,14 +236,18 @@ font-weight: 600;
 
 /* accomdContent */
 .accomdImageDiv1{
-    width: 100%;
+  
     padding: 0px 90px;
     display: flex;
     flex-direction: column;
     position: relative;
 }
+.accomdImageDiv2{
+    width: 100%;
+}
 .accomdImageDiv2 img{
     position: relative;
+    width: 100%;
 }
 .absoluteDivAccomd{
     position: absolute;
