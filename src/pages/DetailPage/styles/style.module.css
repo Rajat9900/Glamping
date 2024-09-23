@@ -1,0 +1,391 @@
+.mainGridDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 150px;
+}
+.HeadingContent{
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.HeadingDiscovery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+  }
+  .HeadingDiscovery div{
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .btnDiscovery2{
+    display: flex;
+    justify-content: center;
+gap: 30px;
+}
+
+.btnCoverDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.btnCoverDiv h4{
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(51, 61, 41, 1);
+}
+.btnDiscovery2 img{
+    padding: 15px 18px;
+    font-size: rgba(51, 61, 41, 1); 
+}
+.btnDiscovery2 button{
+    padding: 15px 18px;
+    border-radius: 50px;
+    font-size: rgba(51, 61, 41, 1);
+    background-color: white;
+    border: 1px solid ;     
+}
+.btnDiscovery2 button:hover{
+    padding: 15px 18px;
+    border-radius: 50px;
+    /* font-size: rgba(51, 61, 41, 1); */
+    background-color: rgba(51, 61, 41, 1);
+    border: 1px solid rgba(51, 61, 41, 1);
+    color: white ;
+    
+    cursor: pointer;
+}
+
+.photoGrid {
+     width: 87%;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5, 2fr); /* 5 columns grid */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows grid */
+    gap: 10px; 
+  }
+  
+  .gridItem {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gridItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+  }
+  
+  .largeItem {
+    grid-column: span 3; /* Make the first image span 3 columns */
+    grid-row: span 2;  
+    height: 483px !important;  /* Span across 2 rows */
+  }
+  
+  .showAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .showAll button {
+    position: absolute;
+    top: 88%;
+    left: 87%;
+    padding: 10px 17px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+   display: flex;
+   justify-content: center;
+   gap: 7px;
+   align-items: center;
+    cursor: pointer;
+  }
+  
+  .showAll button:hover {
+    background-color: #f0f0f0;
+  }
+  .thirdDivContentBottom{
+    display: flex;
+    justify-content: space-between;
+   padding: 50px 90px;
+  }
+  .contntfirstDiv div{
+
+ font-size: 24px;
+ font-weight: 600;
+  }
+  .LeftDivContent{
+    width: 748px;
+  }
+  .firstDivCont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    padding-bottom: 30px;
+
+  }
+  .SecondDivCont{
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    padding-bottom: 30px; 
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .thirdDivCont{
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    padding-bottom: 30px; 
+    padding-top: 30px; 
+    
+  }
+  .thirdDivCont h3{
+   font-size: 20px;
+  font-weight: 600;
+  margin-top: -6px;
+  }
+  .thirdDivCont p{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(51, 61, 41, 0.7);
+  }
+  .linkDivThird{
+    font-size: 14px;
+    font-weight: 500;
+    color:  rgba(51, 61, 41, 0.7);
+    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    width: 13%;
+  }
+
+  .forthDivCont{
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    padding-bottom: 30px;  
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .forthDivCont h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: -6px;
+  }
+  .forthDivCard{
+    width: 20%;
+    padding: 30px 30px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 12px; 
+   
+  }
+  .forthDivCard h4{
+    margin-top: -0px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .forthDivCard p{
+    margin-top: -20px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: -5px;
+    color: rgba(51, 61, 41, 0.7);
+  }
+  .fifthDivCont{
+  
+    padding-bottom: 30px;  
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .fifthDivCont h3{
+    margin-bottom: -8px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .FifthContDiv2{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+.contFiftParticular{
+  width: 43%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.contFiftParticular p{
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(51, 61, 41, 0.9);
+}
+.firthdivBtn{
+  border: 1px solid rgba(221, 221, 221, 0.87);
+  width: 25%;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  color: rgba(51, 61, 41, 1);
+  font-weight: 500;
+}
+  .contntfirstDiv p{
+font-size: 18px;
+font-weight: 400;
+margin-top: -1px;
+color: rgba(51, 61, 41, 0.7);
+  }
+  
+  
+ .contactInfo1 img{
+   padding-right: 18px;
+  float: left;
+  padding-top: 10px;
+}
+.contactInfo1 div{
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.contactInfo1 p{
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 14px;
+   color: rgba(51, 61, 41, 0.7);
+}
+ .contactInfo img{
+   padding-right: 18px;
+  float: left;
+  /* padding-top: 10px; */
+}
+.contactInfo div{
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.contactInfo p{
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 14px;
+   color: rgba(51, 61, 41, 0.7);
+}
+
+.ImgRightContent{
+  width: 380px;
+  border: 1px solid rgba(221, 221, 221, 1);
+height: 495px;
+border-radius: 14px;
+padding:  25px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.ImgRightContent h3{
+font-size: 20px;
+font-weight: 600;
+margin-top: -8px;
+margin-bottom: -1px;
+}
+.ImgRightContent  button{
+border: 1px solid none;
+border-radius: 60px;
+padding: 20px 0px;
+color: white;
+font-size: 17px;
+font-weight: 500;
+background-color: rgba(51, 61, 41, 1);
+}
+.ImgRightContent p{
+  font-size: 14px;
+font-weight: 400;
+color: rgba(51, 61, 41, 0.7);
+text-align: center;
+}
+.calculatingDiv{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+.calculatingDiv div{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.calculatingDiv h5{
+  color: rgba(51, 61, 41, 0.9);
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: -9px;
+}
+.lastDivRightCont{
+  display: flex;
+  justify-content: space-between;
+
+}
+.lastDivRightCont h6{
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 13px;
+}
+.mainDivLower{
+border-radius: 8px;
+border: 1px solid black;
+margin-bottom: 16px;
+}
+.upperDiv{
+display: flex;
+
+}
+.upperDiv div{
+display: flex;
+width: 50%;
+flex-direction: column;
+border-bottom: 1px solid black;
+padding: 0px 20px;
+}
+.upperDiv1{
+  border-right: 1px solid black;
+}
+.upperDiv h4{
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(51, 61, 41, 0.7);
+} 
+.upperDiv h5{ 
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -10px;
+}
+.lowerDiv{
+  padding: 0px 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.lowerDiv h4{
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(51, 61, 41, 0.7);
+} 
+.lowerDiv h5{ 
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -10px;
+}

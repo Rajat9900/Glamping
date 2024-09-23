@@ -13,7 +13,7 @@ const HeroSection = () => {
           {/* </div> */}
           <img src={herosection} className={styles.heroImage} />
           <div className={styles.content}>
-            <div className="">Find Your Bliss
+            <div className="">Find Your Bliss<br/>
             With Luxury Camping</div>
             <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
