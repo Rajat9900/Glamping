@@ -9,17 +9,16 @@ import locationHead2 from "../../../public/locationHead2.png";
 import locationHead3 from "../../../public/locationHead3.png";
 import locationHead4 from "../../../public/locationHead4.png";
 import cropImage1 from "../../../public/cropImage1.png";
-import trySearch1 from '../../../public/trysearch1.png'
-import trySearch2 from '../../../public/trysearch2.png'
-import trySearch3 from '../../../public/trysearch3.png'
-import trySearch5 from '../../../public/trysearch5.png'
-import trySearch6 from '../../../public/trysearch6.png'
-import trySearch7 from '../../../public/trysearch7.png'
-import trySearch8 from '../../../public/trysearch8.png'
-import trySearch9 from '../../../public/trysearch9.png'
-import trySearch10 from '../../../public/trysearch10.png'
+import trySearch1 from "../../../public/trysearch1.png";
+import trySearch2 from "../../../public/trysearch2.png";
+import trySearch3 from "../../../public/trysearch3.png";
+import trySearch5 from "../../../public/trysearch5.png";
+import trySearch6 from "../../../public/trysearch6.png";
+import trySearch7 from "../../../public/trysearch7.png";
+import trySearch8 from "../../../public/trysearch8.png";
+import trySearch9 from "../../../public/trysearch9.png";
+import trySearch10 from "../../../public/trysearch10.png";
 // import cropImage2 from '../../../public/cropImage2.png'
-
 
 const Checkin = () => {
   const locationHeadData = [
@@ -29,24 +28,26 @@ const Checkin = () => {
     { img: locationHead4, head: "North America", para: "560 accommodations" },
   ];
   const trySearchFor = [
-  {image: trySearch1 , Heading: "cabin"},
-  {image: trySearch2 , Heading: "Tented Cabins"},
-  {image: trySearch3 , Heading: "Safari Tents"},
-  {image: trySearch10, Heading: "Tiny Houses"},
+    { image: trySearch1, Heading: "cabin" },
+    { image: trySearch2, Heading: "Tented Cabins" },
+    { image: trySearch3, Heading: "Safari Tents" },
+    { image: trySearch10, Heading: "Tiny Houses" },
 
-  {image: trySearch5 , Heading: "Caravans"},
-  {image: trySearch6 , Heading: "Domes"},
-  {image: trySearch7 , Heading: "Log Cabins"},
-  {image: trySearch8 , Heading: "Yurts"},
-  {image: trySearch9 , Heading: "Bell Tents"},
-  {image: trySearch10, Heading: "Tiny Houses"},
-  {image: trySearch3 , Heading: "Containers"},
-  {image: trySearch10 , Heading: "Tree Houses"},
-  // {image: trySearch8 , Heading: "cabin"},
-  ]
+    { image: trySearch5, Heading: "Caravans" },
+    { image: trySearch6, Heading: "Domes" },
+    { image: trySearch7, Heading: "Log Cabins" },
+    { image: trySearch8, Heading: "Yurts" },
+    { image: trySearch9, Heading: "Bell Tents" },
+    { image: trySearch10, Heading: "Tiny Houses" },
+    { image: trySearch3, Heading: "Containers" },
+    { image: trySearch10, Heading: "Tree Houses" },
+    // {image: trySearch8 , Heading: "cabin"},
+  ];
   return (
     <>
-      <div className={styles.imgCuttingBottom}><img src={cropImage1}/></div>
+      <div className={styles.imgCuttingBottom}>
+        <img src={cropImage1} />
+      </div>
       <div className={styles.formContainer}>
         <div className={styles.formItem}>
           <div>Check-in</div>
@@ -54,7 +55,8 @@ const Checkin = () => {
             <img src={Group2} />
             Where
           </p>
-        </div> <hr/>
+        </div>{" "}
+        <hr />
         <div className={styles.formItem}>
           <div>Check-out</div>
           <p>
@@ -62,7 +64,8 @@ const Checkin = () => {
             <img src={Group2} />
             Where
           </p>
-        </div><hr/>
+        </div>
+        <hr />
         <div className={styles.formItem}>
           <div>Guest</div>
           <p>
@@ -70,15 +73,16 @@ const Checkin = () => {
             <img src={Vector2} />
             Who's coming?
           </p>
-        </div><hr/>
+        </div>
+        <hr />
         <div className={styles.formItem}>
           <div>Accommodation</div>
           <p>
             <img src={Vector} />
             Select?
           </p>
-        </div><hr/>
-
+        </div>
+        <hr />
         <button className={styles.checkAvailability}>Check Availability</button>
       </div>
       <div className={styles.LocationDiv}>
@@ -111,21 +115,22 @@ const Checkin = () => {
       <div className={styles.trySearch}>
         <div className={styles.trySearchHeading}>
           <h2>Try Search For</h2>
-          <p>Explore Distinctive Selections with Our Thoughtfully Curated Categories</p>
+          <p>
+            Explore Distinctive Selections with Our Thoughtfully Curated
+            Categories
+          </p>
         </div>
         <div className={styles.trySeachCard}>
-          {
-            trySearchFor.map((tryHouse)=>{
-        return(
-          <>
-          <div className={styles.particularHouse}>
-            <img src={tryHouse.image}/>
-            <h4>{tryHouse.Heading}</h4>
-          </div>
-          </>
-        )
-            })
-          }
+          {trySearchFor.map((tryHouse) => {
+            return (
+              <>
+                <div className={styles.particularHouse}>
+                  <img src={tryHouse.image} />
+                  <h4>{tryHouse.Heading}</h4>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
     </>
