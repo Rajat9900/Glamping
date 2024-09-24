@@ -22,11 +22,12 @@ import amentyIcon4 from "../../../public/amentyIcon4.png";
 import amentyIcon5 from "../../../public/amentyIcon5.png";
 import amentyIcon6 from "../../../public/amentyIcon6.png";
 import { useNavigate } from "react-router-dom";
+import CarouselNew from "../carouselaNew/CarouselNew";
 // import { Carousel } from "react-responsive-carousel";
 const Discovery = () => {
   const amentyContent = [
     {
-      image: 
+      image:
         amentyIcon1,
       head: "Enhanced Comfort",
       para: "Revel in a heightened level of comfort during your Glamping escapade.",
@@ -107,51 +108,51 @@ const Discovery = () => {
       slidesToSlide: 1,
     },
   };
-// Custom left arrow component
-const CustomLeftArrow = ({onClick }) => (
-  <button
-  onClick={() => onClick()}
-    style={{
-      background: "white",
-      borderRadius: "45px",
-      padding: "0px 10px",
-      border: "1px solid black",
-      position: "absolute",
-      top: "10%",
-      right: "7%",
-      transform: "translateY(-50%)",
-      fontSize: "50px",
-      cursor: "pointer",
-      zIndex: 10, 
-      color: "#333", 
-    }}
-  >
-    <IoIosArrowRoundBack style={{paddingTop: "8px"}}/>
-  </button>
-);
+  // Custom left arrow component
+  const CustomLeftArrow = ({ onClick }) => (
+    <button
+      onClick={() => onClick()}
+      style={{
+        background: "white",
+        borderRadius: "45px",
+        padding: "0px 10px",
+        border: "1px solid black",
+        position: "absolute",
+        top: "10%",
+        right: "7%",
+        transform: "translateY(-50%)",
+        fontSize: "50px",
+        cursor: "pointer",
+        zIndex: 10,
+        color: "#333",
+      }}
+    >
+      <IoIosArrowRoundBack style={{ paddingTop: "8px" }} />
+    </button>
+  );
 
-// Custom right arrow component
-const CustomRightArrow = ({ onClick }) => (
-  <button
-  onClick={() => onClick()}
-    style={{
-      background: "white",
-    borderRadius: "45px",
-    padding: "0px 10px",
-    border: "1px solid black",
-      position: "absolute",
-      top: "10%",
-      right: "10px",
-      transform: "translateY(-50%)",
-      fontSize: "50px",
-      cursor: "pointer",
-      // zIndex: 10, 
-      color: "#333", 
-    }}
-  >
-    <IoIosArrowRoundForward style={{paddingTop: "8px"}}/>
-  </button>
-);
+  // Custom right arrow component
+  const CustomRightArrow = ({ onClick }) => (
+    <button
+      onClick={() => onClick()}
+      style={{
+        background: "white",
+        borderRadius: "45px",
+        padding: "0px 10px",
+        border: "1px solid black",
+        position: "absolute",
+        top: "10%",
+        right: "10px",
+        transform: "translateY(-50%)",
+        fontSize: "50px",
+        cursor: "pointer",
+        // zIndex: 10, 
+        color: "#333",
+      }}
+    >
+      <IoIosArrowRoundForward style={{ paddingTop: "8px" }} />
+    </button>
+  );
 
   const naviagte = useNavigate();
   const navigateToListingPage = () => {
@@ -179,120 +180,8 @@ const CustomRightArrow = ({ onClick }) => (
         </div>
       </div>
       <div className={styles.discoverContentCard}>
-        <div className={styles.HeadingContent}>
-          
-          {/* <div className={styles.btnDiscovery}>
-            <button>
-              <IoIosArrowRoundBack style={{fontSize:"30px"}}/>
-            </button>
+       <CarouselNew />
 
-            <button>
-              <IoIosArrowRoundForward style={{fontSize:"30px"}}/>
-            </button>
-          </div> */}
-        </div>
-
-        {/* <div className={styles.CardCarouselContent}>
-          
-          {discoverContent.map((discoverCont) => {
-            return (
-              <>
-                <Card
-                  className={styles.CardContentDiv}
-                  onClick={navigateToListingPage}
-                >
-                
-                    
-                              <Card.Img
-                               
-                                variant="top"
-                                src={discoverCont.img}
-                                className={styles.ImgCarousel}
-                              />
-                
-                        
-                      
-
-                  <p className={styles.startRatiingdiv}>
-                    {discoverCont.rating}
-                    <span>
-                      <img src={discoverCont.star1} />
-                    </span>
-                  </p>
-                  <div className={styles.cardContent}>
-                    <div>{discoverCont.head}</div>
-                    <p>
-                      <GrLocation /> {discoverCont.para}
-                    </p>
-                    <h4>
-                      {discoverCont.rupees}
-                      <span>{discoverCont.perNight}</span>
-                    </h4>
-                  </div>
-                </Card>
-              </>
-            );
-          })}
-        </div> */}
-        <div className={styles.HeadingDiscovery}>
-            <div>Discovery Luxury Glamp Hub</div>
-            <p>Explore Luxe Camping Near You with Glamp Hub</p>
-          </div>
-        <div style={{ position: "relative",  }}>
-        
-
-      <Carousel
-        responsive={responsive}
-        swipeable={true}
-        draggable={true}
-        infinite={true}
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
-        // showDots={true} 
-        keyBoardControl={true}
-      >
-        
-         {discoverContent.map((discoverCont) => {
-            return (
-              <>
-                <Card
-                  className={styles.CardContentDiv}
-                  onClick={navigateToListingPage}
-                >
-                
-                    
-                              <Card.Img
-                               
-                                variant="top"
-                                src={discoverCont.img}
-                                className={styles.ImgCarousel}
-                              />
-                
-                        
-                      
-
-                  <p className={styles.startRatiingdiv}>
-                    {discoverCont.rating}
-                    <span>
-                      <img src={discoverCont.star1} />
-                    </span>
-                  </p>
-                  <div className={styles.cardContent}>
-                    <div>{discoverCont.head}</div>
-                    <p>
-                      <GrLocation /> {discoverCont.para}
-                    </p>
-                    <h4>
-                      {discoverCont.rupees}
-                      <span>{discoverCont.perNight}</span>
-                    </h4>
-                  </div>
-                </Card>
-              </>
-            );
-          })}
-      </Carousel>
-    </div>
       </div>
       <div className={styles.accomdImageDiv1}>
         <div className={styles.accomdImageDiv2}>
