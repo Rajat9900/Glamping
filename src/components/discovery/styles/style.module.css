@@ -8,6 +8,28 @@ height: 567px;
  /* z-index: 1; */
 }
 
+.arrowBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .arrowBtn:focus {
+    outline: none;
+  }
+  
+  /* Positioning arrows */
+  .custom-left-arrow {
+    left: -25px; /* Adjust as per your design */
+  }
+  
+  .custom-right-arrow {
+    right: -25px; /* Adjust as per your design */
+  }
 .discoveryHeroCutbottom{
 position: absolute;
 top: 360px;
@@ -26,7 +48,7 @@ top: 360px;
 }
 .bookImagesCont{
     position: absolute;
-    top: 170px;
+    top: 130px;
     left: 400px;
     display: flex;
     text-align: center;
@@ -96,6 +118,7 @@ font-size: 36px;
     gap: 20px;
 }
 .HeadingContent{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -118,19 +141,48 @@ font-size: 36px;
   
    
 }
+.carousel-container {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    padding-bottom: 10px;
+justify-content: space-between;
+  }
+  
+  .carousel-item {
+    padding: 10px;
+    /* background-color: #f5f5f5; */
+    border-radius: 10px;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .carousel-arrow {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+
 .btnDiscovery1 img{
     padding: 15px 18px;
     font-size: rgba(51, 61, 41, 1); 
 }
 .btnDiscovery button{
-    padding: 15px 18px;
+    padding: 13px 15px;
     border-radius: 50px;
     font-size: rgba(51, 61, 41, 1);
     background-color: white;
     border: 1px solid ;     
 }
 .btnDiscovery button:hover{
-    padding: 15px 18px;
+    padding: 13px 15px;
     border-radius: 50px;
     /* font-size: rgba(51, 61, 41, 1); */
     background-color: rgba(51, 61, 41, 1);
@@ -141,22 +193,24 @@ font-size: 36px;
 }
 .CardContentDiv{
     position: relative;
-    width: 32%;
+    width: 94%;
     border: 0px solid gray;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.07);
 }
 .CardContentDiv1{ 
     margin-top: 30px; 
-    width: 302px;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
+    width: 389px;
+    position: relative;
+    /* width: 94%; */
+    border: 0px solid gray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.07);
 }
 .cardContent{
     padding: 15px 20px;
     width: 65%;
+    cursor: pointer;
 }
 .cardContent1{
  display: flex;
@@ -201,11 +255,14 @@ text-align: center;
     padding: 5px 15px;
     margin-bottom: 41px;
 }
+
 .ImgCarousel{
 width: 100%; 
 height: 338px;
+/* display: flex; */
 
 }
+
 .startRatiingdiv{
  position: absolute;
  top: 0px;  
@@ -235,7 +292,7 @@ font-weight: 600;
 /* accomdContent */
 .accomdImageDiv1{
   
-    padding: 0px 90px;
+    padding: 0px 105px;
     display: flex;
     flex-direction: column;
     position: relative;

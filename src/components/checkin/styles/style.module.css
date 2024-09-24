@@ -68,14 +68,14 @@ top: 572px;
   gap: 17px;
 }
 .HeadingLocation button{
-  padding: 15px 18px;
+  padding: 13px 15px;
   border-radius: 50px;
   font-size: rgba(51, 61, 41, 1);
   background-color: white;
   border: 1px solid ;  
 }
 .HeadingLocation button:hover{
-  padding: 15px 18px;
+  padding: 13px 15px;
   border-radius: 50px;
   /* font-size: rgba(51, 61, 41, 1); */
   background-color: rgba(51, 61, 41, 1);

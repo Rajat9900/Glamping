@@ -34,6 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .btnCoverDiv h4 {
   font-size: 18px;
@@ -228,6 +229,7 @@
   color: rgba(51, 61, 41, 0.9);
 }
 .firthdivBtn {
+  cursor: pointer;
   border: 1px solid rgba(221, 221, 221, 0.87);
   width: 25%;
   display: flex;
@@ -296,6 +298,7 @@
   margin-bottom: -1px;
 }
 .ImgRightContent button {
+  cursor: pointer;
   border: 1px solid none;
   border-radius: 60px;
   padding: 20px 0px;

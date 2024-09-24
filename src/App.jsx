@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import ListingPage from './pages/listingPage/ListingPage';
 import Homepage from './pages/homePage/Homepage';
 import DetailPage from './pages/DetailPage/DetailPage';
+import Files from './pages/files';
 
 
 

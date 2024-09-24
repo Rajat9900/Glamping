@@ -1,14 +1,14 @@
 // src/components/Navbar.jsx
 import { Link } from "react-router-dom";
 import styles from "./styles/style.module.css";
-import logoImage from "../../../public/logoImage.png";
+import logoHeader from '../../../public/logoHeader.svg'
 const Navbar = () => {
   return (
     <>
       <div className={styles.navbarMainDiv}>
         <nav className={styles.navbar}>
           <div className={styles.logo}>
-            <img src={logoImage} />
+            <img src={logoHeader} />
           </div>
           <div className={styles.navLinks}>
             <li>

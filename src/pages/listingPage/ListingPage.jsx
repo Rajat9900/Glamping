@@ -142,7 +142,7 @@ const ListingPage = () => {
               return (
                 <>
                   <Card
-                    className={styles.CardContentDiv}
+                    className={styles.CardContentDiv1}
                     onClick={goToListingDetail}
                   >
                     <Card.Img

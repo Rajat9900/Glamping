@@ -1,9 +1,11 @@
 import styles from "./styles/style.module.css";
-import Vector from "../../../public/Vector (1).png";
-import Vector2 from "../../../public/Vector (2).png";
-import Group2 from "../../../public/Group 2.png";
-import { FaLongArrowAltLeft } from "react-icons/fa";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import humanIcon from '../../../public/humanIcon.svg'
+import calenderIcon from '../../../public/calenderIcon.svg'
+import locationIcon from '../../../public/locationIcon.svg'
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { IoIosArrowRoundBack } from "react-icons/io";
+// import { FaLongArrowAltLeft } from "react-icons/fa";
+// import { FaLongArrowAltRight } from "react-icons/fa";
 import locationHead1 from "../../../public/locationHead1.png";
 import locationHead2 from "../../../public/locationHead2.png";
 import locationHead3 from "../../../public/locationHead3.png";
@@ -52,7 +54,7 @@ const Checkin = () => {
         <div className={styles.formItem}>
           <div>Check-in</div>
           <p>
-            <img src={Group2} />
+            <img src={calenderIcon} />
             Where
           </p>
         </div>{" "}
@@ -61,7 +63,7 @@ const Checkin = () => {
           <div>Check-out</div>
           <p>
             {" "}
-            <img src={Group2} />
+            <img src={calenderIcon} />
             Where
           </p>
         </div>
@@ -70,7 +72,7 @@ const Checkin = () => {
           <div>Guest</div>
           <p>
             {" "}
-            <img src={Vector2} />
+            <img src={humanIcon} />
             Who's coming?
           </p>
         </div>
@@ -78,7 +80,7 @@ const Checkin = () => {
         <div className={styles.formItem}>
           <div>Accommodation</div>
           <p>
-            <img src={Vector} />
+            <img src={locationIcon} />
             Select?
           </p>
         </div>
@@ -90,10 +92,10 @@ const Checkin = () => {
           <h1>locations on Glamping Hub</h1>
           <div className={styles.buttonLocation}>
             <button>
-              <FaLongArrowAltLeft />
+              <IoIosArrowRoundBack style={{fontSize:"30px"}}/>
             </button>
             <button>
-              <FaLongArrowAltRight />
+              <IoIosArrowRoundForward style={{fontSize:"30px"}}/>
             </button>
           </div>
         </div>
