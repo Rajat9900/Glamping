@@ -1,10 +1,7 @@
 .formContainer{
     display: flex;
     justify-content: space-between;
-    margin-top: 50px ;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 20px 0px
+    padding: 20px 100px 20px 100px;
   };
   .imgCuttingBottom{
     position: relative
@@ -12,8 +9,9 @@
   }
  
    .imgCuttingBottom img{
+width: 100%;
 position: absolute;
-top: 572px;
+top: 510px;
   }
   .formItem{
     display: flex;
@@ -113,13 +111,15 @@ font-weight: 400;
 }
 
 .trySeachCard{
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  place-self: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Creates 6 equal columns */
+  gap: 25px;
 }
 .particularHouse{
-width: 186px;
-height: 136px;
+  padding: 10px;
+width: 145px;
+height: 105px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -127,6 +127,14 @@ align-items: center;
 border-radius: 10px;
 background-color: #C9CBB833;
 }
+
+/* .particularHouse:hover {
+  background-color:#333D29;
+  color: white;
+}
+.particularHouse:hover img {
+  color: white;
+} */
 .particularHouse h4{
 font-size: 18px;
     font-weight: 600;

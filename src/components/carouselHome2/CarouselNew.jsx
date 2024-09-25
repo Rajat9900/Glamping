@@ -55,7 +55,7 @@ const campData = [
   },
 ];
 
-const CarouselNew = () => {
+const CarouselHome2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -126,4 +126,4 @@ const CarouselNew = () => {
   );
 };
 
-export default CarouselNew;
+export default CarouselHome2;

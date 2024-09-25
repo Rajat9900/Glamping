@@ -1,0 +1,122 @@
+.carouselContainer {
+    /* position: relative; */
+    width: 100%;
+    text-align: center;
+    padding: 100px 0px 50px 0px;
+    background-color: rgba(188, 190, 166, 0.8);
+  }
+  
+  .controlsContainer {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 0px 40px 0px 40px;
+  }
+  
+  .subtitle {
+    padding-left: 10px;
+    font-size: 36px;
+    font-weight: 600;
+    color: rgba(51, 61, 41, 1);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .arrowsContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .prev, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #333D29;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: #333D29;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carouselWrapper {
+    overflow: hidden;
+    width: calc(295px * 4 + 20px * 3); /* Width for four cards plus the padding */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .carouselContent {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carouselItem {
+    position: relative;
+    border-radius: 8px;
+    flex: 0 0 280px; /* Fixed width for each item */
+    height: 450px;
+    box-sizing: border-box;
+    margin: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image {
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .cardBody {
+    padding: 10px 0px 10px 0px;
+    background-color: transparent;
+  }
+  
+  .campTitle {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .location {
+    text-align: left;
+    font-size: 16px;
+    color: rgba(99, 99, 99, 1);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-top: -10px;
+  }
+  
+  .discoveryHeroCutTop{
+   position: relative;
+    width: 100%;
+   }
+   .bookcuttingBottom{
+    left: 0px;
+    top: -100px;
+    position: absolute;
+    width: 100%;
+   }

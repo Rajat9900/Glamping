@@ -3,7 +3,6 @@ import bookcuttingTop from "../../../public/bookcuttingTop.png";
 import bookImage from "../../../public/bookImage.png";
 import accomdImage from "../../../public/accomdImage.png";
 import styles from "./styles/style.module.css";
-import star from "../../../public/star.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 // import { FaLongArrowAltLeft } from "react-icons/fa";
@@ -12,9 +11,6 @@ import { GrLocation } from "react-icons/gr";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import Card from "react-bootstrap/Card";
-import discoverImage1 from "../../../public/discoveryImage1.png";
-import discoverImage2 from "../../../public/discoveryImage2.png";
-import discoverImage3 from "../../../public/discoveryImage3.png";
 import amentyIcon1 from "../../../public/amentyIcon1.png";
 import amentyIcon2 from "../../../public/amentyIcon2.png";
 import amentyIcon3 from "../../../public/amentyIcon3.png";
@@ -22,7 +18,7 @@ import amentyIcon4 from "../../../public/amentyIcon4.png";
 import amentyIcon5 from "../../../public/amentyIcon5.png";
 import amentyIcon6 from "../../../public/amentyIcon6.png";
 import { useNavigate } from "react-router-dom";
-import CarouselNew from "../carouselaNew/CarouselNew";
+import CarouselHome2 from "../carouselHome2/CarouselNew";
 // import { Carousel } from "react-responsive-carousel";
 const Discovery = () => {
   const amentyContent = [
@@ -58,101 +54,8 @@ const Discovery = () => {
       para: "Welcoming peace and soothing sounds for ultimate relaxation and inner peace.",
     },
   ];
-  const discoverContent = [
-    {
-      img: discoverImage1,
-      rating: 4.3,
-      star1: star,
-      head: "Ankoret Lac Camp & Party, Da Lat, Vietnam",
-      para: "Mall Road Shimla Hignway",
-      rupees: "$100",
-      perNight: "/night",
-      location: <GrLocation />,
-    },
-    {
-      img: discoverImage2,
-      rating: 4.1,
-      star1: star,
-      head: "Ankoret Lac Camp & Party, Da Lat, Vietnam",
-      para: "Mall Road Shimla Hignway",
-      rupees: "$100",
-      perNight: "/night",
-      location: <GrLocation />,
-    },
-    {
-      img: discoverImage3,
-      rating: 4.7,
-      star1: star,
-      head: "Ankoret Lac Camp & Party, Da Lat, Vietnam",
-      para: "Mall Road Shimla Hignway",
-      rupees: "$100",
-      perNight: "/night",
-      location: <GrLocation />,
-    },
-  ];
+ 
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 1, // Moves 1 card when clicking arrows
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
-  // Custom left arrow component
-  const CustomLeftArrow = ({ onClick }) => (
-    <button
-      onClick={() => onClick()}
-      style={{
-        background: "white",
-        borderRadius: "45px",
-        padding: "0px 10px",
-        border: "1px solid black",
-        position: "absolute",
-        top: "10%",
-        right: "7%",
-        transform: "translateY(-50%)",
-        fontSize: "50px",
-        cursor: "pointer",
-        zIndex: 10,
-        color: "#333",
-      }}
-    >
-      <IoIosArrowRoundBack style={{ paddingTop: "8px" }} />
-    </button>
-  );
-
-  // Custom right arrow component
-  const CustomRightArrow = ({ onClick }) => (
-    <button
-      onClick={() => onClick()}
-      style={{
-        background: "white",
-        borderRadius: "45px",
-        padding: "0px 10px",
-        border: "1px solid black",
-        position: "absolute",
-        top: "10%",
-        right: "10px",
-        transform: "translateY(-50%)",
-        fontSize: "50px",
-        cursor: "pointer",
-        // zIndex: 10, 
-        color: "#333",
-      }}
-    >
-      <IoIosArrowRoundForward style={{ paddingTop: "8px" }} />
-    </button>
-  );
 
   const naviagte = useNavigate();
   const navigateToListingPage = () => {
@@ -162,7 +65,7 @@ const Discovery = () => {
     <>
       <div className={styles.discoveryHeroSection}>
         <div className={styles.discoveryHeroCutTop}>
-          <img src={bookcuttingBottom} />
+          <img src={bookcuttingBottom} style={{width:"100%"}}/>
         </div>
         <div className={styles.discoveryHeroImageCont}>
           <img src={bookImage} className={styles.bookImageStyle} />
@@ -176,11 +79,11 @@ const Discovery = () => {
           </div>
         </div>
         <div className={styles.discoveryHeroCutbottom}>
-          <img src={bookcuttingTop} />
+          <img src={bookcuttingTop} style={{width:"100%"}}/>
         </div>
       </div>
       <div className={styles.discoverContentCard}>
-       <CarouselNew />
+       <CarouselHome2 />
 
       </div>
       <div className={styles.accomdImageDiv1}>
