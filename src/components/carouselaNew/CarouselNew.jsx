@@ -6,6 +6,7 @@ import discoverImage3 from "../../../public/discoveryImage3.png";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { AiFillStar } from "react-icons/ai"; // For star icon
 import { HiOutlineLocationMarker } from "react-icons/hi"; // For location icon
+import { useNavigate } from 'react-router-dom';
 
 const campData = [
   {
@@ -70,6 +71,11 @@ const CarouselNew = () => {
       setCurrentIndex(currentIndex - 1);
     }
   };
+  const navigate = useNavigate()
+const naviagtetolistingPage =() =>{
+navigate('/listingPage')
+}
+
 
   return (
     <div className={styles.carouselContainer}>
@@ -102,7 +108,7 @@ const CarouselNew = () => {
             {campData.map((camp) => (
               <div key={camp.id} className={styles.carouselItem}>
                 <img src={camp.imgUrl} alt={camp.title} className={styles.image} />
-                <div className={styles.cardBody}>
+                <div className={styles.cardBody} onClick={naviagtetolistingPage}>
                   <div className={styles.rating}>
                     <span>{camp.rating}</span>
                     <AiFillStar className={styles.starIcon} />
