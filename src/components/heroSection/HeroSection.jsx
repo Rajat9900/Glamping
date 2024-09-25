@@ -5,7 +5,7 @@ import heroImage from '../../../public/heroImage.svg'
 import bookcuttingBottom from "../../../public/bookcuttingBottom.png";
 // src/components/HeroSection.jsx
 const HeroSection = () => {
-  return (
+  return ( 
     <>
       <div className={styles.hero}>
         {/* <div className={styles.navbarAbsolute}> */}

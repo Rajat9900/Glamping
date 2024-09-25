@@ -1,12 +1,12 @@
 .hero {
   margin: 0px;
   position: relative;
+  height: 751px;
 }
 
 .heroImage {
   position: relative;
   margin: 0;
-  height: 751px;
   width: 100%;
   z-index: 0;
   filter: brightness(0.9);

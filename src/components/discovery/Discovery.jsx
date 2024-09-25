@@ -11,7 +11,7 @@ import amentyIcon3 from "../../../public/amentyIcon3.png";
 import amentyIcon4 from "../../../public/amentyIcon4.png";
 import amentyIcon5 from "../../../public/amentyIcon5.png";
 import amentyIcon6 from "../../../public/amentyIcon6.png";
-import CarouselNew from "../carouselaNew/CarouselNew";
+import CarouselHome2 from '../carouselHome2/CarouselNew'
 // import { Carousel } from "react-responsive-carousel";
 const Discovery = () => {
   const amentyContent = [
@@ -51,7 +51,7 @@ const Discovery = () => {
     <>
       <div className={styles.discoveryHeroSection}>
         <div className={styles.discoveryHeroCutTop}>
-          <img src={bookcuttingBottom} />
+          <img src={bookcuttingBottom} style={{width:"100%"}}/>
         </div>
         <div className={styles.discoveryHeroImageCont}>
           <img src={bookImage} className={styles.bookImageStyle} />
@@ -65,11 +65,12 @@ const Discovery = () => {
           </div>
         </div>
         <div className={styles.discoveryHeroCutbottom}>
-          <img src={bookcuttingTop} />
+          <img src={bookcuttingTop} style={{width:"100%"}}/>
         </div>
       </div>
       <div className={styles.discoverContentCard}>
-        <CarouselNew />
+       <CarouselHome2/>
+
       </div>
       <div className={styles.accomdImageDiv1}>
         <div className={styles.accomdImageDiv2}>

@@ -34,6 +34,9 @@
   }
   
   .prev, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     background-color: #fff;
@@ -62,9 +65,8 @@
   
   .carouselWrapper {
     overflow: hidden;
-    width: calc(397px * 3 + 15px * 2); /* Width of three cards plus the padding */
-    max-width: 1220px;
-    /* margin: 0 auto; */
+    width: calc(374px * 3 + 100px * 2); /* Width of three cards plus the padding */
+    margin: 0 auto;
   }
   
   .carouselContent {
@@ -94,7 +96,6 @@
     padding: 10px;
     background-color: #fff;
     height: 150px;
-    cursor: pointer;
   }
   
   .rating {

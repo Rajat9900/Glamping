@@ -16,7 +16,7 @@ const Footer = () => {
     <div className={styles.footerMainDiv}>
       {/* <div className={styles.footerSubDiv}> */}
       <div>
-        <img src={cropImage2} />
+        <img src={cropImage2} style={{width: "100%"}}/>
       </div>
       <div className={styles.ContentFooter}>
         <div className={styles.leftSideContent}>

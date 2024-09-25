@@ -2,14 +2,6 @@ import styles from "./styles/style.module.css";
 import humanIcon from '../../../public/humanIcon.svg'
 import calenderIcon from '../../../public/calenderIcon.svg'
 import locationIcon from '../../../public/locationIcon.svg'
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoIosArrowRoundBack } from "react-icons/io";
-// import { FaLongArrowAltLeft } from "react-icons/fa";
-// import { FaLongArrowAltRight } from "react-icons/fa";
-import locationHead1 from "../../../public/locationHead1.png";
-import locationHead2 from "../../../public/locationHead2.png";
-import locationHead3 from "../../../public/locationHead3.png";
-import locationHead4 from "../../../public/locationHead4.png";
 import cropImage1 from "../../../public/cropImage1.png";
 import trySearch1 from "../../../public/trysearch1.png";
 import trySearch2 from "../../../public/trysearch2.png";
@@ -20,15 +12,9 @@ import trySearch7 from "../../../public/trysearch7.png";
 import trySearch8 from "../../../public/trysearch8.png";
 import trySearch9 from "../../../public/trysearch9.png";
 import trySearch10 from "../../../public/trysearch10.png";
-// import cropImage2 from '../../../public/cropImage2.png'
+import CarouselHome1 from "../carouselHome1/Carousel";
 
 const Checkin = () => {
-  const locationHeadData = [
-    { img: locationHead1, head: "Africa", para: "460 accommodations" },
-    { img: locationHead2, head: "Europe", para: "560 accommodations" },
-    { img: locationHead3, head: "Asia", para: "260 accommodations" },
-    { img: locationHead4, head: "North America", para: "560 accommodations" },
-  ];
   const trySearchFor = [
     { image: trySearch1, Heading: "cabin" },
     { image: trySearch2, Heading: "Tented Cabins" },
@@ -87,33 +73,7 @@ const Checkin = () => {
         <hr />
         <button className={styles.checkAvailability}>Check Availability</button>
       </div>
-      <div className={styles.LocationDiv}>
-        <div className={styles.HeadingLocation}>
-          <h1>locations on Glamping Hub</h1>
-          <div className={styles.buttonLocation}>
-            <button>
-              <IoIosArrowRoundBack style={{fontSize:"30px"}}/>
-            </button>
-            <button>
-              <IoIosArrowRoundForward style={{fontSize:"30px"}}/>
-            </button>
-          </div>
-        </div>
-
-        <div className={styles.locationsCard}>
-          {locationHeadData.map((location) => {
-            return (
-              <>
-                <div>
-                  <img src={location.img} alt="" />
-                  <h4>{location.head}</h4>
-                  <p>{location.para}</p>
-                </div>
-              </>
-            );
-          })}
-        </div>
-      </div>
+      <CarouselHome1 />
       <div className={styles.trySearch}>
         <div className={styles.trySearchHeading}>
           <h2>Try Search For</h2>
