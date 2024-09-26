@@ -59,6 +59,10 @@ font-weight: 500;
 .divLabelInput1 label{
     color: black;
 }
+.divLabelInput1 p{
+    font-size: 13px;
+    font-weight: 400;
+}
 .divLabelInput1 input{
     border: 1px solid rgba(221, 221, 221, 1);
 border-radius: 60px;
@@ -85,6 +89,11 @@ padding: 17px 22px;
     flex-direction: column;
     gap: 12px;
 }
+.lowerLogin1{
+   margin-top: 20px;
+    gap: 12px;
+}
+
 .btnContinue{
     width: 100%;
     padding: 17px 22px;
