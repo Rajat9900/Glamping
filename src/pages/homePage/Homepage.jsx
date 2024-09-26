@@ -7,10 +7,10 @@ const Homepage = () => {
   
   return (
     <div>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Checkin />
-      <Discovery />
-      <Footer />
+      {/* <Discovery />
+      <Footer /> */}
     </div>
   );
 };
