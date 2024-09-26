@@ -2,7 +2,6 @@ import styles from "./styles/style.module.css";
 import humanIcon from '../../../public/humanIcon.svg'
 import calenderIcon from '../../../public/calenderIcon.svg'
 import locationIcon from '../../../public/locationIcon.svg'
-import cropImage1 from "../../../public/cropImage1.png";
 import trySearch1 from "../../../public/trysearch1.png";
 import trySearch2 from "../../../public/trysearch2.png";
 import trySearch3 from "../../../public/trysearch3.png";
@@ -33,9 +32,6 @@ const Checkin = () => {
   ];
   return (
     <>
-      <div className={styles.imgCuttingBottom}>
-        <img src={cropImage1} />
-      </div>
       <div className={styles.formContainer}>
         <div className={styles.formItem}>
           <div>Check-in</div>

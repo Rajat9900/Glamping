@@ -3,11 +3,12 @@ import styles from "./styles/style.module.css";
 // import herosection from "../../../public/herosection.png";
 import heroImage from '../../../public/heroImage.svg'
 import bookcuttingBottom from "../../../public/bookcuttingBottom.png";
+import cropImage1 from "../../../public/cropImage1.png";
 // src/components/HeroSection.jsx
 const HeroSection = () => {
   return ( 
     <>
-      <div className={styles.hero}>
+      <div className={styles.hero}> 
         {/* <div className={styles.navbarAbsolute}> */}
         <Navbar />
         {/* </div> */}
@@ -23,7 +24,9 @@ const HeroSection = () => {
             industry. Lorem Ipsum has been the industry's standard dummy text
           </p>
         </div>
-        {/* <img className={styles.imgBottom} src={bookcuttingBottom}/> */}
+        <div className={styles.imgCuttingBottom}>
+        <img src={cropImage1} />
+      </div>
       </div>
     </>
   );
