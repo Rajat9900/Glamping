@@ -1,156 +1,241 @@
 .carouselContainer {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.controlsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Space between the paragraph and arrows */
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #777;
+  font-family: 'Poppins', sans-serif;
+}
+
+.arrowsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.prev, .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #333D29;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+  background-color: #333D29;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselWrapper {
+  overflow: hidden;
+  /* width: calc(374px * 3 + 10px * 2); */
+  margin: 0 auto;
+}
+
+.carouselContent {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem {
+  position: relative;
+  border-radius: 8px;
+  flex: 0 0 calc((100% / 3) - 20px); 
+  height: 476px; /* Fixed height for each item */
+  box-sizing: border-box;
+  margin: 10px; /* Ensure margin is consistent */
+  transition: transform 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow for card */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 10px;
+  background-color: #fff;
+  height: 150px;
+}
+
+.rating {
+  display: flex;
+  width: 64px;
+  height: 31px;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 3%;
+  left: 4%;
+  background-color: white;
+  padding: 5px;
+}
+
+.rating span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.starIcon {
+  color: #f5c518;
+  font-size: 15px; 
+}
+
+.campTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+  text-align: left;
+  width: 277px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.locationIcon {
+  color: #666666;
+  font-size: 28px; 
+}
+
+.price {
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+  margin-top: 10px;
+  text-align: left;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    margin: 0px 10px;
   }
-  
+  .carouselItem {
+    flex: 0 0 calc(100% - 20px); /* Full width for small screens */
+    height: 375px;
+  }
+  .carouselContent {
+    transition: transform 0.5s ease-in-out;
+  }
   .title {
-    padding-left: 10px;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    text-align: left;
-    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 0px;
   }
-  
+  .subtitle {
+    font-size: 12px;
+  }
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+  }
   .controlsContainer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px; /* Space between the paragraph and arrows */
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
     margin-bottom: 20px;
+    padding-left: 20px;
   }
-  
-  .subtitle {
-    padding-left: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #777;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .arrowsContainer {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .prev, .next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border: none;
-    color: #333;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    border: 1px solid #333D29;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: #333D29;
-    color: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .carousel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .carouselWrapper {
-    overflow: hidden;
-    width: calc(374px * 3 + 100px * 2); /* Width of three cards plus the padding */
-    margin: 0 auto;
-  }
-  
-  .carouselContent {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 700px;
-  }
-  
-  .carouselItem {
-    position: relative;
-    border-radius: 8px;
-    flex: 0 0 374px; /* Fixed width for each item */
-    height: 521px; /* Fixed height for each item */
-    box-sizing: border-box;
-    margin: 10px;
-    transition: transform 0.3s ease;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow for card */
-  }
-  
   .image {
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
   }
-  
-  .cardBody {
-    padding: 10px;
-    background-color: #fff;
-    height: 150px;
-  }
-  
-  .rating {
-    display: flex;
-    width: 64px;
-    height: 31px;
-    border-radius: 50px;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    position: absolute;
-    top: 3%;
-    left: 4%;
-    background-color: white;
-    padding: 5px;
-  }
-  
-  .rating span {
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  
-  .starIcon {
-    color: #f5c518;
-    font-size: 15px; /* Styling the star icon */
-  }
-  
   .campTitle {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 10px 0;
-    text-align: left;
-    width: 277px;
+    margin: 0px;
+    font-size: 19px;
   }
-  
-  .location {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .locationIcon {
-    color: #666666;
-    font-size: 28px; /* Add this for location icon sizing */
-  }
-  
   .price {
-    display: flex;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #111;
-    margin-top: 10px;
-    text-align: left;
-    align-items: center;
+    margin: 0px;
   }
-  
+  .cardBody {
+    height: 140px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .carouselItem {
+    flex: 0 0 calc(50% - 20px); /* Half width for medium screens */
+  }
+  .carouselContent {
+    transition: transform 0.5s ease-in-out;
+  }
+  .campTitle {
+    margin: 0px;
+  }
+  .price {
+    margin: 0px;
+  }
+  .cardBody {
+    height: 140px;
+  }
+  .title {
+    padding-left: 10px;
+  }
+  .controlsContainer {
+    padding: 0px 10px;
+  }
+}
+
+@media (min-width: 901px) {
+  .carouselItem {
+    flex: 0 0 calc(33.33% - 20px); /* One-third width for large screens */
+  }
+  .title {
+    padding-left: 10px;
+  }
+  .subtitle {
+    padding-left: 10px;
+  }
+  .arrowsContainer{
+    padding-right: 10px;
+  }
+}

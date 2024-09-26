@@ -1,6 +1,5 @@
 .discoveryHeroSection{
 position: relative;
-
 width: 100%;
 height: 580px;
 }
@@ -88,11 +87,7 @@ width: 100%;
 }
 
 /* discoverContentCard */
-.discoverContentCard{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 110px;
-}
+
 .discoverContentCard1{
 display: flex;
 flex-direction: column;
@@ -118,7 +113,7 @@ font-size: 36px;
     gap: 24px;
 }
 .CardCarouselContent1{
-    place-self: center;
+  place-self: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates 6 equal columns */
   gap: 25px;
@@ -217,8 +212,8 @@ justify-content: space-between;
     border-radius: 10px;
 }
 .CardContentDiv3{ 
+    place-self: center;
     margin-top: 30px; 
-    width: 389px;
     position: relative;
      display: flex;
      flex-direction: column;
@@ -260,10 +255,15 @@ font-weight: 600;
 font-size: 18px;
 }
 .cardContent3 p{
+width: 310px;
 font-weight: 400;
 font-size: 15px;
 color: rgba(99, 99, 99, 1);
 text-align: center;
+}
+.CardContentDiv3img{
+    height: 60px;
+    width: 60px;
 }
 
 .trySeachCard{
@@ -326,7 +326,6 @@ font-weight: 600;
 
 /* accomdContent */
 .accomdImageDiv1{
-  
     padding: 0px 105px;
     display: flex;
     flex-direction: column;
@@ -395,3 +394,178 @@ font-weight: 600;
 }
 
 
+@media (max-width: 600px) {
+
+    .cardContent3 p{
+        font-size: 10px;
+        width: 160px;
+        text-align: center;
+    }
+    .cardContent3 div{
+        font-size: 18px;
+        width: 160px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .CardCarouselContent1{
+        place-self: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        place-self: center;
+      }
+      .absoluteDivAccomd{
+        top: 132px;
+        width: 270px;
+        left: 82px;
+        height: 110px;
+        padding: 20px 20px;
+        }
+        .bookImagesCont h1{
+            width: 320px;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 0px 10px 0px 10px;
+        }
+        .bookImagesCont p{
+            width: 320px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: -10px;
+        }
+        
+        .bookImagesCont  button{
+            padding: 13px 30px;
+            font-size: 16px;
+        }
+        .bookImagesCont{
+            width: 100%;
+        }
+        .bookImageStyle{
+            position: relative;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+        .discoveryHeroCutbottom{
+            top: 355px;
+          }
+          .discoveryHeroSection{
+            height: 410px;
+          }
+          .accomdImageDiv1{
+            padding: 50px 20px;
+        }
+        .accomdImageDiv2 img{
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .absoluteDivAccomd{
+            top: 175px;
+            width: 170px;
+            left: 30px;
+            height: 75px;
+            padding: 20px 20px;
+            }
+            .absoluteDivAccomd div{
+                margin-bottom: 0px;
+                font-size: 11px;
+                font-weight: 600;
+                margin-top: -10px;
+            }
+            .absoluteDivAccomd p{
+                margin-bottom: 0px;
+                font-size: 8px;
+                font-weight: 500;
+            }
+            .absoluteDivAccomd button{
+                margin-bottom: 0px;
+                padding: 7px 10px;
+                font-size: 8px;
+                font-weight: 500;
+                border-radius: 60px;
+            }
+            .HeadingDiscovery1 div{
+                font-size: 18px;
+            }
+            .HeadingDiscovery1 p{
+                font-size: 10px;
+                margin-bottom: 30px;
+            }
+            .CardContentDiv3{ 
+                margin-top: 0px;
+              }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .CardCarouselContent1{
+        place-self: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+      .CardContentDiv3{ 
+        width: 300px;
+      }
+      .discoveryHeroCutbottom{
+        top: 438px;
+      }
+      .discoverContentCard{
+        padding: 50px 40px 90px 40px;
+    }
+    .absoluteDivAccomd{
+    top: 260px;
+    width: 280px;
+    left: 82px;
+    height: 125px;
+    padding: 20px 20px;
+    }
+    .absoluteDivAccomd div{
+        margin-bottom: 0px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .absoluteDivAccomd p{
+        margin-bottom: 10px;
+        font-size: 11px;
+        font-weight: 500;
+    }
+    .absoluteDivAccomd button{
+        margin-bottom: 30px;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 60px;
+    }
+    .accomdImageDiv1{
+        padding: 0px 60px;
+    }
+    .accomdImageDiv2 img{
+        height: 450px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+  }
+  
+  @media (min-width: 901px) {
+    .discoverContentCard{
+        padding: 0px 90px 90px 90px;
+    }
+    .absoluteDivAccomd{
+        top: 221px;
+        left: 146px;
+        padding: 20px 20px;
+        }
+        .absoluteDivAccomd div{
+            margin-bottom: 0px;
+        }
+        .absoluteDivAccomd p{
+            margin-bottom: 10px;
+        }
+        .HeadingDiscovery1 div{
+            margin-top: 50px;
+        }
+  }
