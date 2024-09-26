@@ -1,0 +1,138 @@
+/* body.modal-open {
+    overflow: hidden;
+} */
+/* Apply this class to blur the background when the modal is open */
+/* .blur-background {
+    filter: blur(8px);
+    transition: filter 0.3s ease;
+  } */
+  
+.ModalMain{
+    /* position: absolute; */
+    width: 40%;   
+    /* height: 787px; */
+    /* top: 50vh;
+    left: 30%; */
+    padding: 20px 0px;
+    background-color: white;
+    border-radius: 20px;
+}
+.HeaderSection{
+    display: flex;
+     align-items: center;
+     padding: 15px 40px;
+}
+.HeaderSection div{
+  width: 30%;
+
+}
+.HeaderSection h5{
+    margin-top: -2px;
+    margin-bottom: -5px;
+font-size: 22px;
+font-weight: 500;
+}
+.modalBody{
+    padding: 30px 40px;
+}
+.modalBody1{
+    padding: 30px 40px;
+}
+.modalBody1 label{
+    padding: 30px 40px;
+}
+.modalBody h3{
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: -2px;
+}
+.divLabelInput{
+    display: flex;
+    flex-direction: column;
+    color: rgba(102, 102, 102, 1);
+}
+.divLabelInput1{
+    display: flex;
+    flex-direction: column;
+    color: rgba(102, 102, 102, 1);
+}
+.divLabelInput1 label{
+    color: black;
+}
+.divLabelInput1 p{
+    font-size: 13px;
+    font-weight: 400;
+}
+.divLabelInput1 input{
+    border: 1px solid rgba(221, 221, 221, 1);
+border-radius: 60px;
+padding: 17px 22px;
+}
+.divLabelInput1 input::placeholder{
+  font-size: 15px;
+  font-weight: 400;
+}
+.divLabelInput label{
+    margin-bottom: 4px;
+}
+.divLabelInput input{
+    border: 1px solid rgba(221, 221, 221, 1);
+border-radius: 60px;
+padding: 17px 22px;
+}
+.divLabelInput input::placeholder{
+  font-size: 15px;
+  font-weight: 400;
+}
+.lowerLogin{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.lowerLogin1{
+   margin-top: 20px;
+    gap: 12px;
+}
+
+.btnContinue{
+    width: 100%;
+    padding: 17px 22px;
+    background-color: rgba(51, 61, 41, 1);
+    border-radius: 60px;
+    color: white;
+    font-size: 17px;
+  font-weight: 500;  
+}
+.orContent{
+    display: flex;
+justify-content: space-between;
+    align-items: center;
+}
+.orContent div{
+    border: 1px solid rgba(221, 221, 221, 1);
+    width: 45%;
+}
+.btnClose{
+   background-color: white;
+   border: none; 
+   font-size: 15px;
+   font-weight: 500;
+}
+.btnContinueGoogle{
+    /* width: 100%; */
+    display: flex;
+    padding: 17px 22px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 60px;
+    align-items: center;
+}
+.btnContinueGoogle div{
+    width: 30%;
+  
+  }
+  .btnContinueGoogle h4{
+      margin-top: -0px;
+      margin-bottom: -0px;
+  font-size: 15px;
+  font-weight: 500;
+  }

@@ -93,9 +93,8 @@ const Discovery = () => {
             return (
               <>
                 <Card className={styles.CardContentDiv3}>
-                  <div className={styles.CardContentDiv3img}>
                   <Card.Img variant="top" src={discoverCont.image} />
-                  </div>
+
                   <div className={styles.cardContent3}>
                     <div>{discoverCont.head}</div>
                     <p>{discoverCont.para}</p>

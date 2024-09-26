@@ -79,7 +79,7 @@ width: 35%;
     display: flex;
     justify-content: space-between;
 }
-    .navigation{
+.navigation{
     display: flex;
     flex-direction: column;
 
@@ -92,111 +92,9 @@ width: 35%;
 .navigationPara{
     margin-top: -15px;
 }
-.navigationPara p{ 
+.navigationPara p{
+   
     font-size: 17px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.76);
 }
-
-@media (max-width: 600px) {
-    .ContentFooter{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .leftSideContent{
-        padding-left: 20px;
-        gap: 10px;
-      }
-    .leftSideContent img{
-        width: 150px;
-    }
-    .contactInfo{
-        display: flex;
-        flex-direction: column;
-    }
-    .contactInfo div{
-        font-size: 14px;
-      }
-      .contactInfo p{
-        font-size: 10px;
-      }
-      .contactInfo img{
-        padding: 7px;
-        border-radius: 50%;
-        width: 27px;
-      }
-      .rightSideContent{
-        width: 87%;
-        padding: 0px 20px;
-    }
-    .navigation p{ 
-        font-size: 14px;
-      }
-      .navigationPara p{ 
-        font-size: 10px;
-      }
-      .lowerFooter{
-       width: 100%;
-      }
-      .versionFooter{
-        margin-top: 10px !important;
-        font-size: 10px;
-      }
-      .navigation{
-        width: 35%;
-      }
-  }
-  
-  @media (min-width: 601px) and (max-width: 900px) {
-    .ContentFooter{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .leftSideContent{
-      padding-left: 60px;
-      gap: 10px;
-    }
-    .leftSideContent img{
-        width: 200px;
-    }
-    .leftSideContent p{
-        font-size: 12px;
-    }
-    .rightSideContent{
-        width: 87%;
-        padding: 0px 50px;
-    }
-    .contactInfo div{
-        font-size: 16px;
-      }
-      .contactInfo p{
-        font-size: 12px;
-      }
-      .upperFooter{
-        padding: 0px 10px;
-      }
-      .lowerFooter{
-        width: 100%;
-      }
-      .contactInfo img{
-        padding: 10px;
-        border-radius: 50%;
-      }
-      .navigation{
-        width: 35%;
-        padding-left: 10px;
-      }
-      .navigation p{ 
-        font-size: 16px;
-      }
-      .navigationPara p{ 
-        font-size: 12px;
-      }
-      .versionFooter{
-        margin-top: 20px !important;
-      }
-  }
-  
-  @media (min-width: 901px) {
-    
-  }

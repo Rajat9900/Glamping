@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState } from 'react';
 import styles from "./styles/style.module.css";
 import discoverImage1 from "../../../public/discoveryImage1.png";
 import discoverImage2 from "../../../public/discoveryImage2.png";
@@ -58,25 +58,10 @@ const campData = [
 
 const CarouselHome2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(3);
-
-  const updateVisibleCards = () => {
-    if (window.innerWidth <= 600) {
-      setVisibleCards(1); 
-    } else if (window.innerWidth <= 900) {
-      setVisibleCards(2); 
-    } else {
-      setVisibleCards(3); 
-    }
-  };
-  useEffect(() => {
-    updateVisibleCards(); 
-    window.addEventListener('resize', updateVisibleCards); 
-    return () => window.removeEventListener('resize', updateVisibleCards);
-  }, []);
 
   const nextSlide = () => {
-    if (currentIndex < campData.length - visibleCards) {
+    // Prevent showing blank space at the end
+    if (currentIndex < campData.length - 3) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -107,7 +92,7 @@ navigate('/listingPage')
           <button 
             onClick={nextSlide} 
             className={styles.next} 
-            disabled={currentIndex === campData.length - visibleCards} 
+            disabled={currentIndex === campData.length - 3} // Disable when at the end
           >
             <GoArrowRight />
           </button>
@@ -118,7 +103,7 @@ navigate('/listingPage')
         <div className={styles.carouselWrapper}>
           <div
             className={styles.carouselContent}
-            style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}
+            style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
           >
             {campData.map((camp) => (
               <div key={camp.id} className={styles.carouselItem}>
