@@ -1,8 +1,16 @@
 // src/components/Navbar.jsx
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles/style.module.css";
 import logoHeader from '../../../public/logoHeader.svg'
+import { useState } from "react";
+import LoginModal from "../../modals/login/LoginModal";
+import SignUpModal from "../../modals/signUp/SignUpModal";
 const Navbar = () => {
+  const[show, setShow] = useState(false)
+  const handleClose = () =>{
+    setShow(false)
+  }
+  
   return (
     <>
       <div className={styles.navbarMainDiv}>
@@ -32,9 +40,18 @@ const Navbar = () => {
               </Link>
             </li>
           </div>
-          <button className={styles.bookNow}>Book Now</button>
+          <button className={styles.bookNow} onClick={() => setShow(true)}>Book Now</button>
+          
         </nav>
       </div>
+      {/* {show && 
+         <LoginModal 
+         show={show} 
+         onClose={handleClose} />} */}
+      {show && 
+         <SignUpModal 
+         show={show} 
+         onClose={handleClose} />}
     </>
   );
 };
