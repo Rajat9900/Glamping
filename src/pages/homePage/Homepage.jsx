@@ -8,7 +8,7 @@ const Homepage = () => {
   return (
     <div>
       {/* <HeroSection /> */}
-      <Checkin />
+      <Checkin />hh
       {/* <Discovery />
       <Footer /> */}
     </div>
