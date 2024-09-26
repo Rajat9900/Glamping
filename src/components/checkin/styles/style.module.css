@@ -3,16 +3,6 @@
     justify-content: space-between;
     padding: 20px 100px 20px 100px;
   };
-  .imgCuttingBottom{
-    position: relative
-   
-  }
- 
-   .imgCuttingBottom img{
-width: 100%;
-position: absolute;
-top: 510px;
-  }
   .formItem{
     display: flex;
     flex-direction: column;

@@ -43,3 +43,12 @@
   z-index: 1;
   top: 10px;
 }
+.imgCuttingBottom{
+  position: absolute;
+  top: 510px;
+}
+
+ .imgCuttingBottom img{
+width: 100%;
+
+}
