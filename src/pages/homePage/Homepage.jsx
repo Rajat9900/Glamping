@@ -7,10 +7,12 @@ const Homepage = () => {
   
   return (
     <div>
+
       <HeroSection />
       <Checkin />
       <Discovery />
       <Footer />
+
     </div>
   );
 };
