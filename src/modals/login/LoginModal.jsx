@@ -1,44 +1,47 @@
-import { useEffect } from 'react';
+
 import { Modal } from 'react-bootstrap';
 import googleIcon from '../../../public/googleicon.svg';
 import styles from '../styles/style.module.css';
 import { useGoogleLogin } from '@react-oauth/google';
 import crossIcon from '../../../public/crossIcon 2.svg';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const LoginModal = ({ show, onClose }) => {
-  const loginwithGoogle = useGoogleLogin({
+  const navigate = useNavigate();
+
+  const loginWithGoogle = useGoogleLogin({
     onSuccess: async (response) => {
       try {
-        const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+        const googleRes = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
           headers: {
             Authorization: `Bearer ${response.access_token}`,
           },
         });
-        console.log(res.data);
-        localStorage.setItem("userInfo", JSON.stringify(res.data));
-        localStorage.setItem('isAuthenticated', 'true');
+  
+        const { email, given_name, family_name } = googleRes.data; 
+
+        const backendRes = await axios.post("http://localhost:5000/api/google-login", {
+          email,
+          firstName: given_name,
+          lastName: family_name,
+        });
+  
+        console.log(backendRes, "backResab");
+        if (backendRes.data.redirect === 'mainHomepage') {
+          localStorage.setItem("userInfo", JSON.stringify(backendRes.data.user));
+          localStorage.setItem("isAuthenticated", "true");
+          navigate("/mainhomepage");
+        } else if (backendRes.data.redirect === 'signupdetails') {
+          localStorage.setItem("userInfo", JSON.stringify(backendRes.data.user));
+          navigate("/signupdetails");
+        }
       } catch (err) {
-        console.log(err);
+        console.error('Error during Google login or user check:', err);
       }
     },
   });
-
-  // Handle body overflow and blur effect when modal is open
-  useEffect(() => {
-    if (show) {
-      document.body.classList.add('modal-open');
-      document.getElementById('root').classList.add('blur-background'); // Assuming the content is in a div with id "root"
-    } else {
-      document.body.classList.remove('modal-open');
-      document.getElementById('root').classList.remove('blur-background');
-    }
-
-    return () => {
-      document.body.classList.remove('modal-open');
-      document.getElementById('root').classList.remove('blur-background');
-    };
-  }, [show]);
+  
 
   return (
     <Modal
@@ -72,11 +75,11 @@ const LoginModal = ({ show, onClose }) => {
             <p>Or</p>
             <div></div>
           </div>
-          <div className={styles.btnContinueGoogle} onClick={() => loginwithGoogle()}>
+          <div className={styles.btnContinueGoogle} onClick={() => loginWithGoogle()}>
             <div>
               <img src={googleIcon} />
             </div>
-            <h4>Continue with google</h4>
+            <h4 >Continue with Google</h4>
           </div>
         </div>
       </div>

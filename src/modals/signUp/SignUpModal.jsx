@@ -1,95 +1,97 @@
-import React from "react";
-import { useEffect } from "react";
+import { useState } from "react";
 import styles from "../styles/style.module.css";
-import { Modal } from "react-bootstrap";
 import crossIcon from "../../../public/crossIcon 2.svg";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const SignUpModal = ({ show, onClose }) => {
+const SignUpModal = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    dateOfBirth: '',
+    email: ''
+  });
+
   const navigate = useNavigate();
-  const navToMainPage = () => {
-    navigate("mainhomepage");
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      const { data } = await axios.put(`http://localhost:5000/api/users/${userInfo._id}`, formData);
+      localStorage.setItem("userInfo", JSON.stringify(data.user));
+      navigate("/mainhomepage");
+    } catch (err) {
+      console.error("Error updating user:", err);
+    }
   };
 
   return (
-    <Modal
-      show={show}
-      onHide={onClose}
-      backdrop="static"
-      keyboard={false}
-      className={`fade ${styles.ModalMain}`}
-    >
-      <Modal.Header className={styles.HeaderSection}>
+    <>
+      <div className={`fade ${styles.ModalMain}`}>
         <div>
-          <img
-            src={crossIcon}
-            onClick={onClose}
-            style={{ cursor: "pointer" }}
-          />
+          <img src={crossIcon} alt="Close" onClick={() => navigate("/")} style={{ cursor: "pointer" }} />
         </div>
         <h5>Finish signing up</h5>
-      </Modal.Header>
-      <hr />
-      <div className={styles.modalBody}>
-        <div className={styles.divLabelInput1}>
-          <label htmlFor="FirstName">First name</label>
-          <input
-            type="text"
-            id="FirstName"
-            name="firstName"
-            placeholder="John"
-          />
-          <p>
-            We’ll call or text you to confirm your number. Standard message and
-            data rates apply.
-          </p>
-        </div>
-        <div className={styles.divLabelInput1}>
-          <label htmlFor="LastName">Last name</label>
-          <input type="text" id="LastName" name="lastName" placeholder="John" />
-          <p>
-            Make sure this matches the name on your government ID. If you go by
-            another name, you can add a
-            <span style={{ color: "black", textDecoration: "underline" }}>
-              {" "}
-              preferred first name.
-            </span>
-          </p>
-        </div>
-        <div className={styles.divLabelInput1}>
-          <label htmlFor="birthday">Date of birth</label>
-          <input
-            type="date"
-            id="birthday"
-            name="birthday"
-            placeholder="Date of birth"
-          />
-          <p>
-            To sign up, you need to be at least 18. Your birthday won’t be
-            shared with other people who use Glamping.
-          </p>
-        </div>
-        <div className={styles.divLabelInput1}>
-          <label htmlFor="Email">Contact info</label>
-          <input type="email" id="Email" name="email" placeholder="E-mail" />
-          <p>We'll email you trip confirmations and receipts.</p>
-        </div>
-        <p style={{ fontSize: "13px" }}>
-          By selecting Agree and continue, I agree to Glamping’s
-          <span style={{ textDecoration: "underline" }}>
-            {" "}
-            Terms of service, Payment Terms of service,
-          </span>{" "}
-          and acknowledge the
-          <span style={{ textDecoration: "underline" }}> Privacy policy.</span>
-        </p>
-        <div className={styles.lowerLogin}>
-          <button className={styles.btnContinue} onClick={navToMainPage}>
-            Agree and continue
-          </button>
+        <hr />
+        <div className={styles.modalBody}>
+          <div className={styles.divLabelInput1}>
+            <label htmlFor="FirstName">First name</label>
+            <input
+              type="text"
+              id="FirstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              placeholder="John"
+            />
+          </div>
+          <div className={styles.divLabelInput1}>
+            <label htmlFor="LastName">Last name</label>
+            <input
+              type="text"
+              id="LastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleInputChange}
+              placeholder="Doe"
+            />
+          </div>
+          <div className={styles.divLabelInput1}>
+            <label htmlFor="birthday">Date of birth</label>
+            <input
+              type="date"
+              id="birthday"
+              name="dateOfBirth"
+              value={formData.dateOfBirth}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className={styles.divLabelInput1}>
+            <label htmlFor="Email">Contact info</label>
+            <input
+              type="email"
+              id="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="E-mail"
+            />
+          </div>
+          <div className={styles.lowerLogin}>
+            <button className={styles.btnContinue} onClick={handleSubmit}>
+              Agree and continue
+            </button>
+          </div>
         </div>
       </div>
-    </Modal>
+    </>
   );
 };
 

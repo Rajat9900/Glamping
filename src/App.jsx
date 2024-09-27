@@ -6,6 +6,7 @@ import Homepage from './pages/homePage/Homepage';
 import DetailPage from './pages/DetailPage/DetailPage';
 import Files from './pages/files';
 import MainHomePage from './pages/homepageMain/mainHomePage';
+import SignUpModal from './modals/signUp/SignUpModal';
 // import LoginModal from './modals/login/loginModal';
 
 
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Homepage/>} />
           <Route path="/listingPage" element={<ListingPage/>} />
           <Route path="/mainhomepage" element={<MainHomePage/>} />
+          <Route path="/signupdetails" element={<SignUpModal/>} />
           {/* <Route path="/login" element={<LoginModal/>} /> */}
           <Route path="/listingdetailPage" element={<DetailPage/>} />
         </Routes>

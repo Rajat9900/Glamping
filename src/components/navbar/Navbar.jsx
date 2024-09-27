@@ -44,14 +44,14 @@ const Navbar = () => {
           
         </nav>
       </div>
-      {/* {show && 
+      {show && 
          <LoginModal 
          show={show} 
-         onClose={handleClose} />} */}
-      {show && 
+         onClose={handleClose} />}
+      {/* {show && 
          <SignUpModal 
          show={show} 
-         onClose={handleClose} />}
+         onClose={handleClose} />} */}
     </>
   );
 };
