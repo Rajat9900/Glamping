@@ -6,14 +6,43 @@ import { useState } from "react";
 import LoginModal from "../../modals/login/LoginModal";
 import SignUpModal from "../../modals/signUp/SignUpModal";
 const Navbar = () => {
-  const[show, setShow] = useState(false)
-  const handleClose = () =>{
-    setShow(false)
+  // const[show, setShow] = useState(false)
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
+
+  // const handleClose = () =>{
+  //   setShow(false)
+  // }
+
+  const handleLoginClose = () => {
+    setShowLogin(false);
+  };
+
+  const handleSignUpClose = () => {
+    setShowSignUp(false);
+  };
+// const navigate = useNavigate()
+const handleLoginSuccess = (showSignupDetail) => {
+  setShowLogin(false); 
+  if (showSignupDetail) {
+    setShowSignUp(true); 
+  
   }
+  console.log( typeof showSignupDetail  , "showSignupDetail")
+};
+
+
   
   return (
     <>
+   
       <div className={styles.navbarMainDiv}>
+      {/* {show && 
+         <LoginModal 
+         show={show} 
+         onClose={handleClose} 
+         onSuccess={handleLoginSuccess} 
+         />} */}
         <nav className={styles.navbar}>
           <div className={styles.logo}>
             <img src={logoHeader} />
@@ -40,18 +69,25 @@ const Navbar = () => {
               </Link>
             </li>
           </div>
-          <button className={styles.bookNow} onClick={() => setShow(true)}>Book Now</button>
+          <button className={styles.bookNow} style={{position:"relative"}}   onClick={() => setShowLogin(true)}>Book Now</button>
           
         </nav>
       </div>
-      {show && 
-         <LoginModal 
-         show={show} 
-         onClose={handleClose} />}
-      {/* {show && 
-         <SignUpModal 
-         show={show} 
-         onClose={handleClose} />} */}
+      
+      {showLogin && (
+        <LoginModal
+          show={showLogin}
+          onClose={handleLoginClose}
+          onLoginSuccess={handleLoginSuccess} 
+        />
+      )}
+
+      {showSignUp && (
+        <SignUpModal
+          show={showSignUp}
+          onClose={handleSignUpClose}
+        />
+      )}
     </>
   );
 };

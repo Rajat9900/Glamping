@@ -76,11 +76,11 @@
   position: relative;
   border-radius: 8px;
   flex: 0 0 calc((100% / 3) - 20px); 
-  height: 476px; /* Fixed height for each item */
+  height: 578px;
   box-sizing: border-box;
-  margin: 10px; /* Ensure margin is consistent */
+  margin: 10px; 
   transition: transform 0.3s ease;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow for card */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .image {
@@ -92,7 +92,7 @@
 .cardBody {
   padding: 10px;
   background-color: #fff;
-  height: 150px;
+  height: 178px;
 }
 
 .rating {

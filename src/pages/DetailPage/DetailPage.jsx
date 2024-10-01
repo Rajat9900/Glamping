@@ -24,7 +24,7 @@ import washingIcon from "../../../public/washingIcon.png";
 import shareIcon from "../../../public/shareIcon.png";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 const DetailPage = () => {
   const placeItems = [
@@ -37,6 +37,10 @@ const DetailPage = () => {
     { img: dropOffIcon, header: "Luggage drop-off allowed" },
     { img: balconyIcon, header: "Patio or balcony" },
   ];
+const naviagate = useNavigate()
+  const navigateToReviewOrder = () =>{
+naviagate('/reviewOrderPage')
+  }
   return (
     <div>
       <Navbar />
@@ -185,7 +189,7 @@ const DetailPage = () => {
               </div>
             </div>
           </div>
-          <button>Reserve</button>
+          <button onClick={navigateToReviewOrder}>Reserve</button>
           <p>You won't be charged yet</p>
           <div className={styles.calculatingDiv}>
             <div>

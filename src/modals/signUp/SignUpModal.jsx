@@ -3,8 +3,9 @@ import styles from "../styles/style.module.css";
 import crossIcon from "../../../public/crossIcon 2.svg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
 
-const SignUpModal = () => {
+const SignUpModal = ({show, onClose}) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -31,10 +32,12 @@ const SignUpModal = () => {
       console.error("Error updating user:", err);
     }
   };
-
+console.log(show , "showSignUp")
   return (
     <>
-      <div className={`fade ${styles.ModalMain}`}>
+      <Modal
+      show={show} onHide={onClose} centered
+      className={` ${styles.ModalMain}`}>
         <div>
           <img src={crossIcon} alt="Close" onClick={() => navigate("/")} style={{ cursor: "pointer" }} />
         </div>
@@ -90,7 +93,7 @@ const SignUpModal = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Modal>
     </>
   );
 };

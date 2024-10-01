@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.mainfirstCont{
+ display: flex;
+ flex-direction: column;
+ gap: 10px;   
+}
+.upperhead{
+    padding: 0px 110px; 
+    margin-top: 150px;
+}
+.upperFirstHead h3{
+font-size: 16px;
+font-weight: 400;
+
+}
+.upperFirstHead  h3 span{
+font-size: 16px;
+font-weight: 400;
+color: rgb(142, 141, 141);;
+}
+.upperSecondHead h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+}
+.leftDiv{
+    width: 729px;
+    /* border: 1px solid rgba(221, 221, 221, 1); */
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+.thirdDivContentBottom1{
+    display: flex;
+    /* margin-top: 50px; */
+    justify-content: space-between;
+    padding: 20px 90px;
+}
+.LeftDivContent1{
+    /* width: 729px; */
+    border: 1px solid rgba(221, 221, 221, 1);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.secondLeftContSub h3{
+font-size: 16px;
+font-weight: 700;
+}
+.cardName label{
+    font-family: "Cambay";
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+}
+.cardInfoCont label{
+    color: rgba(0, 0, 0, 0.3);
+    font-family: "Cambay";
+    font-size: 12px;
+    font-weight: 700;
+}
+.leftSubCont{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: center;
+}
+.firstLeftDiv{
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 1px solid rgba(0, 0, 0, 0.3);
+padding: 10px;
+border-radius: 4px;
+}
+.imgTickPick{
+    border-radius: 15px;
+    padding: 0px 5px;
+    background-color: gray;
+}
+.ImgRightContent1{
+    width: 475px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    height: 530px;
+    /* border-radius: 14px; */
+    padding: 25px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    gap: 10px;
+    /* box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.07); */ 
+}
+.firstRightDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+.leftSubCont h3{
+    font-family:"Cambay";
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.ImgRightContent3{
+    width: 475px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    gap: 10px;
+    /* box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.07); */ 
+}
+.secondLeftContSub{
+    display: flex;
+gap: 20px;
+flex-direction: column;
+}
+.cardName{
+    display: flex;
+    flex-direction: column;
+   gap: 7px; 
+}
+.cardName input{
+padding: 10px;
+background-color: rgba(241, 241, 241, 0.4);
+border: none;
+}
+
+.cardInfoCont{
+    display: flex;
+    gap: 10px;
+}
+.cardInfoSubCont{
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+.cardInfoSubCont input{
+    padding: 10px;
+    background-color: rgba(241, 241, 241, 0.4);
+    border: none;   
+}
+.divMainContentSub{
+display: flex;
+justify-content: space-between; 
+}
+.divMainContentSub{
+display: flex;
+justify-content: space-between;
+}
+.divMainContentSub h2{
+font-size: 17px;
+font-weight: 500;
+
+}
+.divMainContentSub h3{
+font-size: 19px;
+font-weight: 500;
+}
+.divMainContentSub h4{
+font-size: 19px;
+font-weight: 500;
+color: rgba(92, 92, 92, 1)
+}
+.divMainContentSub h5{
+font-size: 17px;
+font-weight: 500;
+color: rgba(5, 160, 104, 1);
+}
+
+
+.btnOrderPage1{
+    width: 100%;
+border-radius: 60px;
+padding: 13px 70px;
+background-color: rgba(51, 61, 41, 1);
+color: white;
+font-size: 16px;
+font-weight: 500;
+}
+.btnCont{
+ display: flex;
+ gap: 10px;
+}
+.btnCont button:first-child{
+    width: 30%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 60px;
+    border: 1px solid rgba(51, 61, 41, 1);
+}
+.secondBtn{
+    width: 30%;
+    padding: 10px;
+    background-color: rgba(51, 61, 41, 1);
+    color: white;
+    border-radius: 60px;
+    border: 1px solid rgba(51, 61, 41, 1);
+}

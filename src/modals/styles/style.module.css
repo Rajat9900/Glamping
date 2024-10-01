@@ -1,21 +1,21 @@
-/* body.modal-open {
-    overflow: hidden;
-} */
-/* Apply this class to blur the background when the modal is open */
-/* .blur-background {
-    filter: blur(8px);
-    transition: filter 0.3s ease;
-  } */
+
   
-.ModalMain{
-    /* position: absolute; */
+ .ModalMain{
     width: 40%;   
-    /* height: 787px; */
-    /* top: 50vh;
-    left: 30%; */
     padding: 20px 0px;
-    background-color: white;
-    border-radius: 20px;
+    /* background-color: white; */
+    border-radius: 20px;  
+}
+.modal{
+    display: flex !important; 
+    align-items: center; 
+    justify-content: center; 
+    /* height: 100vh;  */
+  }
+.modal-dialog {
+    margin: 0; 
+    max-width: none;
+    width: auto; 
 }
 .HeaderSection{
     display: flex;
@@ -102,6 +102,7 @@ padding: 17px 22px;
     color: white;
     font-size: 17px;
   font-weight: 500;  
+  margin: 30px 0px;
 }
 .orContent{
     display: flex;
@@ -120,7 +121,7 @@ justify-content: space-between;
 }
 .btnContinueGoogle{
     /* width: 100%; */
-    display: flex;
+     display: flex;
     padding: 17px 22px;
     border: 1px solid rgba(221, 221, 221, 1);
     border-radius: 60px;
@@ -135,4 +136,4 @@ justify-content: space-between;
       margin-bottom: -0px;
   font-size: 15px;
   font-weight: 500;
-  }
+  }     

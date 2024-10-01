@@ -45,7 +45,8 @@
 }
 .imgCuttingBottom{
   position: absolute;
-  top: 510px;
+  bottom: -10px;
+
 }
 
  .imgCuttingBottom img{

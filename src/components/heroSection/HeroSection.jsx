@@ -10,9 +10,10 @@ const HeroSection = () => {
     <>
       <div className={styles.hero}> 
         {/* <div className={styles.navbarAbsolute}> */}
-        <Navbar />
+        
         {/* </div> */}
         <img src={heroImage} className={styles.heroImage} />
+        <Navbar />
         <div className={styles.content}>
           <div className="">
             Find Your Bliss

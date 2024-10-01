@@ -62,7 +62,7 @@
   
   .carouselWrapper {
     overflow: hidden;
-    width: calc(295px * 4 + 20px * 3); /* Width for four cards plus the padding */
+    width: calc(295px * 4 + 20px * 3);
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -75,8 +75,8 @@
   .carouselItem {
     position: relative;
     border-radius: 8px;
-    flex: 0 0 280px; /* Fixed width for each item */
-    height: 450px;
+    flex: 0 0 280px; 
+    height: 470px;
     box-sizing: border-box;
     margin: 10px;
     transition: transform 0.3s ease;

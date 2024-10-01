@@ -108,8 +108,8 @@ font-size: 36px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 30px 0px;
+    justify-content: space-between;
+    /* margin: 30px 0px; */
     gap: 24px;
 }
 .CardCarouselContent1{
@@ -205,11 +205,12 @@ justify-content: space-between;
     justify-content: center;
     align-items: center;
     margin-top: 30px; 
-    width: 343px;
+    width: 31%;
     position: relative;
     /* width: 94%; */
     border: 0px solid gray;
     border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 .CardContentDiv3{ 
     place-self: center;
@@ -221,8 +222,8 @@ justify-content: space-between;
   
 }
 .cardContent{
-    padding: 15px 20px;
-    width: 65%;
+    padding: 15px 8px;
+    /* width: 65%; */
     cursor: pointer;
 }
 .cardContent1{

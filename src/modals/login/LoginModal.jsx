@@ -1,5 +1,5 @@
 
-import { Modal } from 'react-bootstrap';
+import  Modal  from 'react-bootstrap//Modal'
 import googleIcon from '../../../public/googleicon.svg';
 import styles from '../styles/style.module.css';
 import { useGoogleLogin } from '@react-oauth/google';
@@ -7,7 +7,7 @@ import crossIcon from '../../../public/crossIcon 2.svg';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const LoginModal = ({ show, onClose }) => {
+const LoginModal = ({ show, onClose,onLoginSuccess }) => {
   const navigate = useNavigate();
 
   const loginWithGoogle = useGoogleLogin({
@@ -32,9 +32,11 @@ const LoginModal = ({ show, onClose }) => {
           localStorage.setItem("userInfo", JSON.stringify(backendRes.data.user));
           localStorage.setItem("isAuthenticated", "true");
           navigate("/mainhomepage");
-        } else if (backendRes.data.redirect === 'signupdetails') {
+          onLoginSuccess(false)
+        } else {
           localStorage.setItem("userInfo", JSON.stringify(backendRes.data.user));
-          navigate("/signupdetails");
+          // navigate("/signupdetails");
+          onLoginSuccess(true);
         }
       } catch (err) {
         console.error('Error during Google login or user check:', err);
@@ -44,19 +46,27 @@ const LoginModal = ({ show, onClose }) => {
   
 
   return (
+  
+
+
+
     <Modal
       show={show}
       onHide={onClose}
-      backdrop="static"
-      keyboard={false}
-      className={`fade ${styles.ModalMain}`}
+      
+      // backdrop="static"
+      // keyboard={false}
+      // aria-labelledby="contained-modal-title-vcenter"
+
+      centered
+      // className={`fade ${styles.ModalMain}`}
     >
-      <Modal.Header className={styles.HeaderSection}>
+      <div className={styles.HeaderSection}>
         <div>
           <img src={crossIcon} onClick={onClose} style={{ cursor: "pointer" }} />
         </div>
         <h5>Login or sign up</h5>
-      </Modal.Header>
+      </div>
       <hr />
       <div className={styles.modalBody}>
         <h3>Welcome to Glamping</h3>

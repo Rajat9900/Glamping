@@ -327,7 +327,7 @@
   color: rgba(51, 61, 41, 0.9);
   font-weight: 400;
   font-size: 14px;
-  margin-top: -9px;
+
 }
 .lastDivRightCont {
   display: flex;
@@ -351,7 +351,7 @@
   width: 50%;
   flex-direction: column;
   border-bottom: 1px solid black;
-  padding: 0px 20px;
+  padding: 5px 20px;
 }
 .upperDiv1 {
   border-right: 1px solid black;
@@ -364,10 +364,10 @@
 .upperDiv h5 {
   font-size: 12px;
   font-weight: 500;
-  margin-top: -10px;
+  /* margin-top: -10px; */
 }
 .lowerDiv {
-  padding: 0px 20px;
+  padding: 5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -380,5 +380,5 @@
 .lowerDiv h5 {
   font-size: 12px;
   font-weight: 500;
-  margin-top: -10px;
+
 }

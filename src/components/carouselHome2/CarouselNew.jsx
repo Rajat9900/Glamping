@@ -4,8 +4,8 @@ import discoverImage1 from "../../../public/discoveryImage1.png";
 import discoverImage2 from "../../../public/discoveryImage2.png";
 import discoverImage3 from "../../../public/discoveryImage3.png";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import { AiFillStar } from "react-icons/ai"; // For star icon
-import { HiOutlineLocationMarker } from "react-icons/hi"; // For location icon
+import { AiFillStar } from "react-icons/ai";
+import { HiOutlineLocationMarker } from "react-icons/hi"; 
 import { useNavigate } from 'react-router-dom';
 
 const campData = [
