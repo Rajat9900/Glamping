@@ -114,7 +114,7 @@ const ListingPage = () => {
           {trySearchFor.map((tryHouse) => {
             return (
               <>
-                <div className={styles.particularHouse}>
+                <div className={styles.particularHouse1}>
                   <img src={tryHouse.image} />
                   <h4>{tryHouse.Heading}</h4>
                 </div>

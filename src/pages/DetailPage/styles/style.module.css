@@ -37,6 +37,7 @@
   cursor: pointer;
 }
 .btnCoverDiv h4 {
+  margin-bottom: 0px;
   font-size: 18px;
   font-weight: 400;
   color: rgba(51, 61, 41, 1);
@@ -97,8 +98,8 @@
 
 .showAll button {
   position: absolute;
-  top: 88%;
-  left: 87%;
+  top: 83%;
+    left: 86%;
   padding: 10px 17px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -187,12 +188,12 @@
   border-radius: 12px;
 }
 .forthDivCard h4 {
-  margin-top: -0px;
+  margin-top: 5px;
   font-size: 16px;
   font-weight: 500;
 }
 .forthDivCard p {
-  margin-top: -20px;
+  margin-top: -10px;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: -5px;
@@ -215,6 +216,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 19px;
 }
 .contFiftParticular {
   width: 43%;
@@ -224,6 +226,7 @@
   flex-wrap: wrap;
 }
 .contFiftParticular p {
+  margin-bottom: 0px;
   font-size: 14px;
   font-weight: 400;
   color: rgba(51, 61, 41, 0.9);

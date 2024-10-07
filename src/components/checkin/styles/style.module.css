@@ -108,8 +108,8 @@ font-weight: 400;
 }
 .particularHouse{
   padding: 10px;
-width: 145px;
-height: 105px;
+width: 161px;
+height: 136px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -128,6 +128,6 @@ background-color: #C9CBB833;
 .particularHouse h4{
 font-size: 18px;
     font-weight: 600;
-    margin-top: 13px;
-    margin-bottom: -2px;
+    margin-top: 17px;
+    margin-bottom: 0px;
 }

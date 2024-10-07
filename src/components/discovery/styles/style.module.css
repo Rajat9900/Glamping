@@ -222,7 +222,7 @@ justify-content: space-between;
   
 }
 .cardContent{
-    padding: 15px 8px;
+    padding: 15px;
     /* width: 65%; */
     cursor: pointer;
 }
@@ -274,14 +274,18 @@ text-align: center;
     flex-wrap: wrap;
     gap: 10px;
   }
-  .particularHouse{
+  .particularHouse1{
     width: 122px;
     height: 97px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+  }
+  .particularHouse1 h4{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 17px;
   }
 .trySeachCard button{
   border: 1px solid gray;
@@ -347,10 +351,11 @@ font-weight: 600;
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: absolute;
-    top: 250px;
+    /* top: 250px; */
     width: 570px;
-    left: 120px;
-    height: 200px;
+    bottom: 28px;
+    /* left: 120px; */
+    height: 250px;
     color: white;
     background-color: rgba(51, 61, 41, 0.6);
     padding: 40px 40px;
@@ -556,8 +561,9 @@ font-weight: 600;
         padding: 0px 90px 90px 90px;
     }
     .absoluteDivAccomd{
-        top: 221px;
+        /* top: 221px; */
         left: 146px;
+        bottom: 28px;
         padding: 20px 20px;
         }
         .absoluteDivAccomd div{

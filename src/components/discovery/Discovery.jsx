@@ -92,7 +92,7 @@ const Discovery = () => {
           {amentyContent.map((discoverCont) => {
             return (
               <>
-                <Card className={styles.CardContentDiv3}>
+                <div className={styles.CardContentDiv3}>
                   <div className={styles.CardContentDiv3img}>
                   <Card.Img variant="top" src={discoverCont.image} />
                   </div>
@@ -100,7 +100,7 @@ const Discovery = () => {
                     <div>{discoverCont.head}</div>
                     <p>{discoverCont.para}</p>
                   </div>
-                </Card>
+                </div>
               </>
             );
           })}
