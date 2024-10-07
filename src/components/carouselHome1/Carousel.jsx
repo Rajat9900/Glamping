@@ -105,7 +105,7 @@ const CarouselHome1 = () => {
             style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}
           >
             {campData.map((camp) => (
-              <div key={camp.id} className={styles.carouselItem}>
+              <div key={camp.id} className={styles.carouselItem4}>
                 <img src={camp.imgUrl} alt={camp.title} className={styles.image} />
                 <div className={styles.cardBody}>
                   <h3 className={styles.campTitle}>{camp.title}</h3>

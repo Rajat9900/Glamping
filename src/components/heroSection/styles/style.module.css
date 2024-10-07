@@ -1,7 +1,7 @@
 .hero {
   margin: 0px;
   position: relative;
-  height: 751px;
+  /* height: 751px; */
 }
 
 .heroImage {
@@ -45,7 +45,7 @@
 }
 .imgCuttingBottom{
   position: absolute;
-  bottom: -10px;
+  bottom: 0px;
 
 }
 

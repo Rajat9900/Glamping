@@ -76,7 +76,7 @@
   position: relative;
   border-radius: 8px;
   flex: 0 0 calc((100% / 3) - 20px); 
-  height: 578px;
+  height: 524px;
   box-sizing: border-box;
   margin: 10px; 
   transition: transform 0.3s ease;
@@ -93,6 +93,7 @@
   padding: 10px;
   background-color: #fff;
   height: 178px;
+  cursor: pointer;
 }
 
 .rating {
