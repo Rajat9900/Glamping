@@ -3,16 +3,29 @@ import styles from './styles/style.module.css'
 import  Navbar  from '../../components/navbar/Navbar'
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
+import { MdArrowBackIos } from "react-icons/md";
 import paymentPic1 from '../../../public/paymentPic1.svg'
+import { useState } from 'react';
 const ReviewOrder = () => {
+  const [guests, setGuests] = useState(1)
     const navigate = useNavigate()
     const navigateToPayment  = () =>{
      navigate('/paymentDetails')
     }
+    
   return (
     <div>
       <Navbar/>
+      <div className={styles.upperhead}>
+  <div className={styles.upperFirstHead}>
+    <h3><span>Home /</span><span> Building & Community /</span> <span> Tour Details / </span><span> Review Booking /</span> payment Methods</h3>
+  </div>
+  <div className={styles.upperSecondHead}>
+    <h3><span><MdArrowBackIos/></span>Payment Methods</h3>
+  </div>
+  </div>
       <div className={styles.thirdDivContentBottom1}>
+    
         <div className={styles.LeftDivContent1}>
          <h3 className={styles.headingthree}>Your Trip</h3>
          <div className={styles.divContfirst}>
@@ -21,11 +34,6 @@ const ReviewOrder = () => {
               <h3>28 Nov'22</h3>
               <h4>Monday</h4>
             </div>
-            {/* <div className={styles.secondDivCont}>
-          <hr/>
-            <h3>1 day</h3>
-           <hr/>
-            </div> */}
             <div className={styles.orContent}>
             <div></div>
             <p>1 Day</p>
@@ -40,18 +48,18 @@ const ReviewOrder = () => {
             </div>
          </div><hr/>
          <div>
-           <h3 className={styles.bookingFor}>I am booking for</h3> 
-       <div className={styles.thirdDivCont1}>
-        <div className={styles.checkboxDiv}>
-            <input type='checkbox'/>
-        <label>Myself</label>
-        </div>
-        <div className={styles.checkboxDiv}>
-            <input type='checkbox'/>
-        <label>Someone Else</label>
-        </div>
-        </div>
-         </div>
+  <h3 className={styles.bookingFor}>I am booking for</h3>
+  <div className={styles.thirdDivCont1}>
+    <div className={styles.checkboxDiv}>
+      <input type="radio" id="myself" name="bookingFor" />
+      <label htmlFor="myself">Myself</label>
+    </div>
+    <div className={styles.checkboxDiv}>
+      <input type="radio" id="someoneElse" name="bookingFor" />
+      <label htmlFor="someoneElse">Someone Else</label>
+    </div>
+  </div>
+</div>
     <div className={styles.thirdDivCont2}>
     <div className={styles.inputContent}>
     <h4>Name</h4>  
@@ -71,9 +79,9 @@ const ReviewOrder = () => {
    <div className={styles.lastDivContent}>
     <h4>Number of Guests</h4>
     <div className={styles.lastDivContentsub}>
-        <div> - </div>
-        <p>1</p>
-        <div> + </div>
+        <div onClick={() => setGuests(guests + 1)}> - </div>
+        <p>{guests}</p>
+        <div onClick={() => setGuests(guests - 1)}> + </div>
     </div>
    </div>
 

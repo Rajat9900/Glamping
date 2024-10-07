@@ -11,6 +11,7 @@
 .upperFirstHead h3{
 font-size: 16px;
 font-weight: 400;
+cursor: pointer;
 
 }
 .upperFirstHead  h3 span{

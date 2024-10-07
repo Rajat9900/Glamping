@@ -9,6 +9,7 @@ import dollarPick2 from '../../../public/dollarPick2.svg'
 import cryptoImg from '../../../public/cryptoImg.svg'
 import MasterCardpic from '../../../public/MasterCardpic.svg'
 import AmericanExpresspic from '../../../public/AmericanExpresspic.svg'
+import { useNavigate } from 'react-router-dom';
 const PaymentMethod = () => {
     const payments = [
         {img:  dollarPick2, heading: "Cash Payment" , imgCheck: tickPic1},
@@ -16,6 +17,13 @@ const PaymentMethod = () => {
         {img:  MasterCardpic, heading: "Master Card" , imgCheck: tickPic1},
         {img:  AmericanExpresspic, heading: "American Express" , imgCheck: tickPic1},
     ]
+  const navigate = useNavigate()
+const navigateSuccessFail = ()=>{
+  navigate('/paymentSuccess')
+}
+
+
+
   return (
     <div>
   <Navbar/>
@@ -69,7 +77,7 @@ return(
 </div>
 <div className={styles.cardInfoSubCont}>
 <label>CVV</label>  
- <input type='password' /> 
+ <input type='password' maxLength={3}/> 
 </div>
 </div>
 </div>
@@ -115,7 +123,7 @@ return(
 
 
         </div>
-        <div className={styles.btnOrderPage}> <button className={styles.btnOrderPage1} >Confirm and Pay <span><MdKeyboardArrowRight/></span></button></div> 
+        <div className={styles.btnOrderPage} onClick={navigateSuccessFail}> <button className={styles.btnOrderPage1} >Confirm and Pay <span><MdKeyboardArrowRight/></span></button></div> 
         </div>
   </div>
     </div>

@@ -2,9 +2,29 @@
 
 .thirdDivContentBottom1{
     display: flex;
-    margin-top: 50px;
+
     justify-content: space-between;
-    padding: 70px 90px;
+    padding: 70px 105px;
+}
+.upperhead{
+    padding: 0px 110px; 
+    margin-top: 150px;
+}
+.upperFirstHead h3{
+font-size: 16px;
+font-weight: 400;
+cursor: pointer;
+
+}
+.upperFirstHead  h3 span{
+font-size: 16px;
+font-weight: 400;
+color: rgb(142, 141, 141);;
+}
+.upperSecondHead h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
 }
 .LeftDivContent1{
     width: 729px;
@@ -128,6 +148,34 @@ font-weight: 700;
 color: rgba(51, 61, 41, 0.7);
 }
 
+/* Styling the radio buttons to look like checkboxes */
+.checkboxDiv input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 16px;
+    height: 16px;
+    border-radius: 1px;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 6px;
+  }
+  
+  .checkboxDiv input[type="radio"]:checked::before {
+    content: '✓';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    /* color: # */
+  }
+
 .lastDivContent h4{
 font-size: 18px;
 font-weight: 400;
@@ -144,6 +192,7 @@ width: 25%;
 }
 .lastDivContentsub div{
     color: orange;
+    cursor: pointer;
 }
 .lastDivContentsub p{
 margin-bottom: 0px;
@@ -152,7 +201,7 @@ margin-bottom: 0px;
 .ImgRightContent1{
         width: 475px;
         border: 1px solid rgba(221, 221, 221, 1);
-        height: 495px;
+        height: 535px;
         /* border-radius: 14px; */
         padding: 25px;
         display: flex;

@@ -9,6 +9,8 @@ import MainHomePage from './pages/homepageMain/mainHomePage';
 import SignUpModal from './modals/signUp/SignUpModal';
 import ReviewOrder from './pages/reviewOrder/ReviewOrder';
 import PaymentMethod from './pages/payments/PaymentMethod';
+import PaymentSuccess from './components/paymentSucces/PaymentSuccess';
+import PaymentCancel from './components/paymentCancel/PaymentCancel';
 // import LoginModal from './modals/login/loginModal';
 
 
@@ -22,6 +24,8 @@ const App = () => {
           <Route path="/signupdetails" element={<SignUpModal/>} />
           <Route path="/reviewOrderPage" element={<ReviewOrder/>} />
           <Route path="/paymentDetails" element={<PaymentMethod/>} />
+          <Route path="/paymentSuccess" element={<PaymentSuccess/>} />
+          <Route path="/paymentFail" element={<PaymentCancel/>} />
           {/* <Route path="/login" element={<LoginModal/>} /> */}
           <Route path="/listingdetailPage" element={<DetailPage/>} />
         </Routes>
