@@ -1,4 +1,5 @@
 import styles from "./styles/style.module.css";
+import { useState } from "react";
 import humanIcon from '../../../public/humanIcon.svg'
 import calenderIcon from '../../../public/calenderIcon.svg'
 import locationIcon from '../../../public/locationIcon.svg'
@@ -14,22 +15,26 @@ import trySearch10 from "../../../public/trysearch10.png";
 import CarouselHome1 from "../carouselHome1/Carousel";
 
 const Checkin = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
   const trySearchFor = [
-    { image: trySearch1, Heading: "cabin" },
-    { image: trySearch2, Heading: "Tented Cabins" },
-    { image: trySearch3, Heading: "Safari Tents" },
-    { image: trySearch10, Heading: "Tiny Houses" },
+    {id: 1, image: trySearch1, Heading: "cabin" },
+    {id: 2, image: trySearch2, Heading: "Tented Cabins" },
+    {id: 3, image: trySearch3, Heading: "Safari Tents" },
+    {id: 4, image: trySearch10, Heading: "Tiny Houses" },
 
-    { image: trySearch5, Heading: "Caravans" },
-    { image: trySearch6, Heading: "Domes" },
-    { image: trySearch7, Heading: "Log Cabins" },
-    { image: trySearch8, Heading: "Yurts" },
-    { image: trySearch9, Heading: "Bell Tents" },
-    { image: trySearch10, Heading: "Tiny Houses" },
-    { image: trySearch3, Heading: "Containers" },
-    { image: trySearch10, Heading: "Tree Houses" },
+    {id: 5, image: trySearch5, Heading: "Caravans" },
+    {id: 6, image: trySearch6, Heading: "Domes" },
+    {id: 7, image: trySearch7, Heading: "Log Cabins" },
+    {id: 8, image: trySearch8, Heading: "Yurts" },
+    {id: 9, image: trySearch9, Heading: "Bell Tents" },
+    {id: 10, image: trySearch10, Heading: "Tiny Houses" },
+    {id: 11, image: trySearch3, Heading: "Containers" },
+    {id: 12, image: trySearch10, Heading: "Tree Houses" },
     // {image: trySearch8 , Heading: "cabin"},
   ];
+  const handleSelect = (id) => {
+    setSelectedItem(id); // Set the clicked item's ID as the selected one
+  };
   return (
     <>
       <div className={styles.formContainer}>
@@ -79,16 +84,16 @@ const Checkin = () => {
           </p>
         </div>
         <div className={styles.trySeachCard}>
-          {trySearchFor.map((tryHouse) => {
-            return (
-              <>
-                <div className={styles.particularHouse}>
-                  <img src={tryHouse.image} />
-                  <h4>{tryHouse.Heading}</h4>
-                </div>
-              </>
-            );
-          })}
+          {trySearchFor.map((tryHouse) => (
+            <div
+              key={tryHouse.id}
+              className={`${styles.particularHouse} ${selectedItem === tryHouse.id ? styles.active : ""}`} // Apply 'active' class if selected
+              onClick={() => handleSelect(tryHouse.id)} 
+            >
+              <img src={tryHouse.image} alt={tryHouse.Heading} />
+              <h4>{tryHouse.Heading}</h4>
+            </div>
+          ))}
         </div>
       </div>
     </>

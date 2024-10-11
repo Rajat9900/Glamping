@@ -1,15 +1,19 @@
 
 import  Modal  from 'react-bootstrap//Modal'
 import googleIcon from '../../../public/googleicon.svg';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from '../styles/style.module.css';
 import { useGoogleLogin } from '@react-oauth/google';
 import crossIcon from '../../../public/crossIcon 2.svg';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import {useForm} from 'react-hook-form'
 
 const LoginModal = ({ show, onClose,onLoginSuccess }) => {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const loginWithGoogle = useGoogleLogin({
     onSuccess: async (response) => {
       try {
@@ -33,17 +37,45 @@ const LoginModal = ({ show, onClose,onLoginSuccess }) => {
           localStorage.setItem("isAuthenticated", "true");
           navigate("/mainhomepage");
           onLoginSuccess(false)
+          toast.success("Google login successful!");
         } else {
+          alert(backendRes.data.message)
           localStorage.setItem("userInfo", JSON.stringify(backendRes.data.user));
           // navigate("/signupdetails");
+          toast.error(backendRes.data.message);
           onLoginSuccess(true);
         }
       } catch (err) {
+        toast.error("Google login failed. Please try again.");
         console.error('Error during Google login or user check:', err);
       }
     },
   });
+
+
   
+  const onSubmit = async(data) => {
+    const emailLoginRes = await axios.post("http://localhost:5000/api/emailLogin", {
+      email: data.email,
+  password: data.password,
+    
+    });
+    console.log(emailLoginRes, "emailloginRes");
+    if (emailLoginRes.data.redirect === 'mainHomepage') {
+      localStorage.setItem("userInfo", JSON.stringify(emailLoginRes.data.user));
+      localStorage.setItem("isAuthenticated", "true");
+      navigate("/mainhomepage");
+      onLoginSuccess(false)
+     
+      toast.success("Login successful!");
+      console.log("Login successful, showing toast." , toast);
+    } else {
+      localStorage.setItem("userInfo", JSON.stringify(emailLoginRes.data.user));
+      toast.error(emailLoginRes.data.message)
+      // navigate("/signupdetails");
+      onLoginSuccess(true);
+    }
+  };
 
   return (
   
@@ -65,21 +97,46 @@ const LoginModal = ({ show, onClose,onLoginSuccess }) => {
         <div>
           <img src={crossIcon} onClick={onClose} style={{ cursor: "pointer" }} />
         </div>
-        <h5>Login or sign up</h5>
+        <h5>sign up</h5>
       </div>
       <hr />
-      <div className={styles.modalBody}>
+      <form className={styles.modalBody} onSubmit={handleSubmit(onSubmit)}>
         <h3>Welcome to Glamping</h3>
         <div className={styles.divLabelInput}>
-          <label>Enter your phone number</label>
-          <input type="number" placeholder="+91 97799-68093" />
-          <p>
-            We’ll call or text you to confirm your number. Standard message and data rates apply.
-            <span style={{ color: "black", textDecoration: "underline" }}>Privacy Policy</span>
-          </p>
+          <label>Enter your Email</label>
+          <input 
+          type="email" 
+          placeholder="E-mail"
+          {...register("email" ,{
+            required: "EMail is required",
+            pattern: {
+              value: /^\S+@\S+$/i,
+              message: "Does not match email format",
+            },
+          })} />
+          {errors.email && <span style={{color:"red"}}>{errors.email.message}</span>}
         </div>
-        <div className={styles.lowerLogin}>
-          <button className={styles.btnContinue}>Continue</button>
+        <div className={styles.divLabelInput}>
+          <label>Enter your password</label>
+          <input type="password"  
+          {...register("password" , {
+            required:"Password is required",
+            minLength:{
+              value: 8,
+              message:"Password must be atleast 8 characters long"
+            }
+          })}
+          />
+          {errors.password && <span style={{color:"red"}}>{errors.password.message}</span>} {/* Display password error */}
+        </div>
+        <div className={styles.divLabelInput2}>
+        <input type="checkbox"  
+         
+          />
+          <label>Forget Password?</label>
+        </div>
+        <div className={styles.lowerLogin} >
+          <button className={styles.btnContinue} type="submit">Continue</button>
           <div className={styles.orContent}>
             <div></div>
             <p>Or</p>
@@ -92,7 +149,8 @@ const LoginModal = ({ show, onClose,onLoginSuccess }) => {
             <h4 >Continue with Google</h4>
           </div>
         </div>
-      </div>
+      </form>
+
     </Modal>
   );
 };

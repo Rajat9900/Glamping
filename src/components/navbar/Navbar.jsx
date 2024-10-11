@@ -4,16 +4,21 @@ import styles from "./styles/style.module.css";
 import logoHeader from '../../../public/logoHeader.svg'
 import { useState } from "react";
 import LoginModal from "../../modals/login/LoginModal";
-import SignUpModal from "../../modals/signUp/SignUpModal";
+import SignUpModal from "../../modals/signupmodal/SignUpModal";
+import OtherSignUpModal from  '../../modals/othersignUp/OtherSignUpModal'
 const Navbar = () => {
   // const[show, setShow] = useState(false)
   const [showLogin, setShowLogin] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
+  const [showSignup, setShowSignup] = useState(false)
 
   // const handleClose = () =>{
   //   setShow(false)
   // }
 
+  const handleSignupClose = () => {
+    setShowSignup(false);
+  };
   const handleLoginClose = () => {
     setShowLogin(false);
   };
@@ -81,9 +86,16 @@ const handleLoginSuccess = (showSignupDetail) => {
           onLoginSuccess={handleLoginSuccess} 
         />
       )}
+      {showSignup && (
+        <SignUpModal
+          show={showSignUp}
+          onClose={handleSignupClose}
+          onSignUpSuccess={handleSignupClose} 
+        />
+      )}
 
       {showSignUp && (
-        <SignUpModal
+        <OtherSignUpModal
           show={showSignUp}
           onClose={handleSignUpClose}
         />

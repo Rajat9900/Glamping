@@ -116,18 +116,28 @@ justify-content: center;
 align-items: center;
 border-radius: 10px;
 background-color: #C9CBB833;
+cursor: pointer;
+transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-/* .particularHouse:hover {
-  background-color:#333D29;
-  color: white;
-}
-.particularHouse:hover img {
-  color: white;
-} */
+
 .particularHouse h4{
 font-size: 18px;
     font-weight: 600;
     margin-top: 17px;
     margin-bottom: 0px;
+}
+
+
+.particularHouse:hover {
+  transform: scale(1.05);
+}
+.active {
+  background-color: rgba(51, 61, 41, 1); 
+  border: 2px solid rgb(30, 33, 27);
+  color: white;
+  transform: scale(1.1); /* Slightly enlarge the active item */
+}
+.active img{
+  filter:invert(100%)
 }
