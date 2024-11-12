@@ -22,7 +22,7 @@ import kitchenIcon from "../../../public/kitchenIcon.png";
 import petIcon from "../../../public/petIcon.png";
 import washingIcon from "../../../public/washingIcon.png";
 import shareIcon from "../../../public/shareIcon.png";
-
+import locationPhoto from '../../../public/locationPhoto.svg'
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
@@ -163,6 +163,17 @@ naviagate('/reviewOrderPage')
               Show all amenities
             </div>
           </div>
+          <div>
+            <h3>View on map</h3>
+            
+          <div className="ratio ratio-16x9">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109348.20372523597!2d77.00312378933073!3d31.078272679921525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390578e3e35d6e67%3A0x1f7e7ff6ff9f54b7!2sShimla%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1729748867590!5m2!1sen!2sin" width="600" height="250"  allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div><span><img src={locationPhoto}/></span>84746 O'Connell Station, Abu Dhabi Emirate, Al Dhafrah Region
+            </div>
+
+          </div>
+         
         </div>
 
         <div className={styles.ImgRightContent}>

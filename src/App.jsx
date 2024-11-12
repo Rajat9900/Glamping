@@ -11,6 +11,7 @@ import PaymentMethod from './pages/payments/PaymentMethod';
 import PaymentSuccess from './components/paymentSucces/PaymentSuccess';
 import PaymentCancel from './components/paymentCancel/PaymentCancel';
 import LoginModal from './modals/login/LoginModal';
+import OtpInput from './modals/otpInput/OtpInput';
 // import LoginModal from './modals/login/loginModal';
 
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/paymentDetails" element={<PaymentMethod/>} />
           <Route path="/paymentSuccess" element={<PaymentSuccess/>} />
           <Route path="/paymentFail" element={<PaymentCancel/>} />
+          <Route path="/otpSentResend" element={<OtpInput/>} />
           <Route path="/listingdetailPage" element={<DetailPage/>} />
         </Routes>
      
