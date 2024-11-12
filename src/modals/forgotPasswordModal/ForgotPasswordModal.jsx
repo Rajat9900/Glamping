@@ -20,9 +20,7 @@ const ForgotPasswordModal = ({ show, onClose }) => {
           { email: data.email }
          
         );
-        if(email !== data.email){
-            toast.error(res.data.message);
-        }
+       
         toast.success(res.data.message);
         // navigate(`/reset-password/${res.data.token}`); 
         console.log(res.data , "res of forget-password") 
