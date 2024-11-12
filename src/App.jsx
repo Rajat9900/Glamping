@@ -12,6 +12,7 @@ import PaymentSuccess from './components/paymentSucces/PaymentSuccess';
 import PaymentCancel from './components/paymentCancel/PaymentCancel';
 import LoginModal from './modals/login/LoginModal';
 import OtpInput from './modals/otpInput/OtpInput';
+import ResetPassword12 from './modals/resetpassword12/ResetPassword12';
 // import LoginModal from './modals/login/loginModal';
 
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/listingPage" element={<ListingPage/>} />
           <Route path="/mainhomepage" element={<MainHomePage/>} />
           <Route path="/signupdetails" element={<SignUpModal/>} />
+          <Route path="/reset-password/:token" element={<ResetPassword12/>} />
           <Route path="/loginPage" element={<LoginModal/>} />
           <Route path="/reviewOrderPage" element={<ReviewOrder/>} />
           <Route path="/paymentDetails" element={<PaymentMethod/>} />

@@ -1,53 +1,52 @@
 // src/components/Navbar.jsx
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import styles from "./styles/style.module.css";
-import logoHeader from '../../../public/logoHeader.svg'
+import logoHeader from '../../../public/logoHeader.svg';
 import { useState } from "react";
 import LoginModal from "../../modals/login/LoginModal";
 import SignUpModal from "../../modals/signupmodal/SignUpModal";
-import OtherSignUpModal from  '../../modals/othersignUp/OtherSignUpModal'
+import OtherSignUpModal from '../../modals/othersignUp/OtherSignUpModal';
+import ForgotPasswordModal from "../../modals/forgotPasswordModal/ForgotPasswordModal"; // Import ForgotPasswordModal
+
 const Navbar = () => {
-  // const[show, setShow] = useState(false)
   const [showLogin, setShowLogin] = useState(false);
-  const [showSignUp, setShowSignUp] = useState(false);
-  const [showSignup, setShowSignup] = useState(false)
+  const [showSignup, setShowSignUp] = useState(false);
+  const [showSignupOther, setShowSignupOther] = useState(false);
+  const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false); // New state for ForgotPasswordModal
 
-  // const handleClose = () =>{
-  //   setShow(false)
-  // }
-
-  const handleSignupClose = () => {
-    setShowSignup(false);
-  };
   const handleLoginClose = () => {
     setShowLogin(false);
   };
 
-  const handleSignUpClose = () => {
+  const handleSignupClose = () => {
     setShowSignUp(false);
+    setShowSignupOther(true);
   };
-// const navigate = useNavigate()
-const handleLoginSuccess = (showSignupDetail) => {
-  setShowLogin(false); 
-  if (showSignupDetail) {
-    setShowSignUp(true); 
-  
-  }
-  console.log( typeof showSignupDetail  , "showSignupDetail")
-};
 
+  const handleSignUpClose = () => {
+    setShowSignupOther(false);
+  };
 
-  
+  const handleLoginSuccess = (showSignupDetail) => {
+    setShowLogin(false);
+    if (showSignupDetail) {
+      setShowSignUp(true);
+    }
+  };
+
+  const handleSwitchToLogin = () => {
+    setShowSignUp(false);
+    setShowLogin(true);
+  };
+
+  const handleForgotPasswordClick = () => {
+    setShowForgotPasswordModal(true); 
+    setShowLogin(false); 
+  };
+
   return (
     <>
-   
       <div className={styles.navbarMainDiv}>
-      {/* {show && 
-         <LoginModal 
-         show={show} 
-         onClose={handleClose} 
-         onSuccess={handleLoginSuccess} 
-         />} */}
         <nav className={styles.navbar}>
           <div className={styles.logo}>
             <img src={logoHeader} />
@@ -74,30 +73,43 @@ const handleLoginSuccess = (showSignupDetail) => {
               </Link>
             </li>
           </div>
-          <button className={styles.bookNow} style={{position:"relative"}}   onClick={() => setShowLogin(true)}>Book Now</button>
-          
+          <button
+            className={styles.bookNow}
+            style={{ position: "relative" }}
+            onClick={() => setShowSignUp(true)}
+          >
+            Book Now
+          </button>
         </nav>
       </div>
-      
+
       {showLogin && (
         <LoginModal
           show={showLogin}
           onClose={handleLoginClose}
-          onLoginSuccess={handleLoginSuccess} 
-        />
-      )}
-      {showSignup && (
-        <SignUpModal
-          show={showSignUp}
-          onClose={handleSignupClose}
-          onSignUpSuccess={handleSignupClose} 
+          onLoginSuccess={handleLoginSuccess}
+          onForgotPasswordClick={handleForgotPasswordClick} // Pass forgot password handler
         />
       )}
 
-      {showSignUp && (
-        <OtherSignUpModal
-          show={showSignUp}
-          onClose={handleSignUpClose}
+      {showSignup && (
+        <SignUpModal
+          show={showSignup}
+          onClose={handleSignupClose}
+          onSignUpSuccess={handleSignupClose}
+          onSwitchToLogin={handleSwitchToLogin}
+        />
+      )}
+
+      {showSignupOther && (
+        <OtherSignUpModal show={showSignupOther} onClose={handleSignUpClose} />
+      )}
+
+      {/* ForgotPasswordModal */}
+      {showForgotPasswordModal && (
+        <ForgotPasswordModal
+          show={showForgotPasswordModal}
+          onClose={() => setShowForgotPasswordModal(false)}
         />
       )}
     </>

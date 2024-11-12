@@ -153,3 +153,94 @@ justify-content: space-between;
   font-size: 15px;
   font-weight: 500;
   }     
+
+  /* reset Password  */
+
+.resetPassMainvdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #6e8efb, #a777e3); */
+    padding: 20px;
+  }
+  
+
+  .resetPassform {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: slideIn 0.5s ease;
+  }
+  
+
+  .resetPassform h3 {
+    font-size: 1.8rem;
+    color: #5d54a4;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+
+  .resetPassform input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #f0f0f5;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+ 
+  .resetPassform input:focus {
+    background: #e6e6ff;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(94, 92, 230, 0.6);
+  }
+  
+  
+  .resetPassform p {
+    color: #ff4b4b;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+  
+
+  .resetPassform button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: linear-gradient(90deg, #6e8efb, #a777e3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+
+  .resetPassform button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

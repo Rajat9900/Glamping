@@ -9,7 +9,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
-const SignUpModal = ({ show, onClose, onLoginSuccess, onSignUpSuccess }) => {
+
+const SignUpModal = ({ show, onClose, onLoginSuccess, onSignUpSuccess ,onSwitchToLogin}) => {
+  // const[logShow,setLoginshow] = useState(false)
   const navigate = useNavigate();
   const {
     register,
@@ -76,15 +78,9 @@ const SignUpModal = ({ show, onClose, onLoginSuccess, onSignUpSuccess }) => {
     );
     console.log(emailSignupRes, "emailloginRes");
     if (emailSignupRes.data.redirect === "loginPage") {
-    //   localStorage.setItem(
-    //     "userInfo",
-    //     JSON.stringify(emailSignupRes.data.user)
-    //   );
       localStorage.setItem("isAuthenticated", "true");
-    //   navigate("/loginPage");
-      onSignUpSuccess(false); // Close the signup modal
+      onSignUpSuccess(false); 
       onLoginSuccess(true); 
-    //   onSignUpSuccess(false);
       toast.success("Login successful!");
       console.log("Login successful, showing toast.", toast);
     } else {
@@ -93,7 +89,6 @@ const SignUpModal = ({ show, onClose, onLoginSuccess, onSignUpSuccess }) => {
         JSON.stringify(emailSignupRes.data.user)
       );
       toast.error(emailSignupRes.data.message);
-      // navigate("/signupdetails");
       onSignUpSuccess(true);
     }
   };
@@ -151,9 +146,13 @@ const SignUpModal = ({ show, onClose, onLoginSuccess, onSignUpSuccess }) => {
             <span style={{ color: "red" }}>{errors.password.message}</span>
           )}
         </div>
-        <div className={styles.divLabelInput2}>
+        {/* <div className={styles.divLabelInput2}>
           <input type="checkbox" />
           <label>Forget Password?</label>
+        </div> */}
+        <div className={styles.divLabelInput2}>
+     
+          <label onClick={onSwitchToLogin} style={{cursor: "pointer"}}>already have an account? <span  >Log In</span></label>
         </div>
         <div className={styles.lowerLogin}>
           <button className={styles.btnContinue} type="submit">
