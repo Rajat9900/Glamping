@@ -81,9 +81,10 @@ const LoginModal = ({ show, onClose, onLoginSuccess,onForgotPasswordClick }) => 
     console.log(emailLoginRes, "emailloginRes");
     if (emailLoginRes.data.redirect === "mainHomepage") {
       localStorage.setItem("userInfo", JSON.stringify(emailLoginRes.data.user));
+      console.log(emailLoginRes,"emailLoginres")
       localStorage.setItem("isAuthenticated", "true");
       navigate("/mainhomepage");
-      onLoginSuccess(false);
+      // onLoginSuccess(false);
 
       toast.success("Login successful!");
       console.log("Login successful, showing toast.", toast);

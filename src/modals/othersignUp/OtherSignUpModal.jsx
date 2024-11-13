@@ -24,15 +24,21 @@ const SignUpModal = ({show, onClose}) => {
 
   const handleSubmit = async () => {
     try {
+   
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      if(!userInfo || userInfo._id){
+        console.log("user id is missing")
+      }
+      console.log(userInfo , "userinfo get")
       const { data } = await axios.put(`http://localhost:5000/api/users/${userInfo._id}`, formData);
+      console.log(data.data, "data of api")
       localStorage.setItem("userInfo", JSON.stringify(data.user));
       navigate("/mainhomepage");
     } catch (err) {
       console.error("Error updating user:", err);
     }
   };
-console.log(show , "showSignUp")
+
   return (
     <>
       <Modal

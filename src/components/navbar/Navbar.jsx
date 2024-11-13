@@ -6,13 +6,13 @@ import { useState } from "react";
 import LoginModal from "../../modals/login/LoginModal";
 import SignUpModal from "../../modals/signupmodal/SignUpModal";
 import OtherSignUpModal from '../../modals/othersignUp/OtherSignUpModal';
-import ForgotPasswordModal from "../../modals/forgotPasswordModal/ForgotPasswordModal"; // Import ForgotPasswordModal
+import ForgotPasswordModal from "../../modals/forgotPasswordModal/ForgotPasswordModal"
 
 const Navbar = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignUp] = useState(false);
   const [showSignupOther, setShowSignupOther] = useState(false);
-  const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false); // New state for ForgotPasswordModal
+  const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false);
 
   const handleLoginClose = () => {
     setShowLogin(false);
@@ -20,11 +20,16 @@ const Navbar = () => {
 
   const handleSignupClose = () => {
     setShowSignUp(false);
+    // setShowSignupOther(true);
+  };
+  const handleSignupSucces = () => {
+    setShowSignUp(false);
     setShowSignupOther(true);
   };
 
   const handleSignUpClose = () => {
     setShowSignupOther(false);
+    setShowSignUp(false);
   };
 
   const handleLoginSuccess = (showSignupDetail) => {
@@ -88,7 +93,7 @@ const Navbar = () => {
           show={showLogin}
           onClose={handleLoginClose}
           onLoginSuccess={handleLoginSuccess}
-          onForgotPasswordClick={handleForgotPasswordClick} // Pass forgot password handler
+          onForgotPasswordClick={handleForgotPasswordClick} 
         />
       )}
 
@@ -96,13 +101,15 @@ const Navbar = () => {
         <SignUpModal
           show={showSignup}
           onClose={handleSignupClose}
-          onSignUpSuccess={handleSignupClose}
+          onSignUpSuccess={handleSignupSucces}
           onSwitchToLogin={handleSwitchToLogin}
         />
       )}
 
       {showSignupOther && (
-        <OtherSignUpModal show={showSignupOther} onClose={handleSignUpClose} />
+        <OtherSignUpModal 
+        show={showSignupOther} 
+        onClose={handleSignUpClose} />
       )}
 
       {/* ForgotPasswordModal */}
